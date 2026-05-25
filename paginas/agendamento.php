@@ -6,23 +6,24 @@
     <form id="formAgendamento" class="row g-3">
       <div class="col-md-6">
         <label for="nome" class="form-label">Nome Completo</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" >
+        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
       </div>
       <div class="col-md-6">
         <label for="telefone" class="form-label">WhatsApp</label>
-        <input type="text" class="form-control" id="telefone" placeholder="(11) 99999-9999" >
+        <input type="text" class="form-control" id="telefone" placeholder="(11) 99999-9999" required>
       </div>
       <div class="col-md-6">
         <label for="email" class="form-label">E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="seu@email.com" >
+        <input type="email" class="form-control" id="email" placeholder="seu.email@exemplo.com" required>
       </div>
       <div class="col-md-6">
         <label for="veiculo" class="form-label">Veículo/Placa</label>
-        <input type="text" class="form-control" id="veiculo" placeholder="Ex: Corolla Cinza ABC-1234" >
+        <input type="text" class="form-control" id="veiculo" placeholder="Ex: Corolla Cinza ABC-1234" required>
       </div>
       <div class="col-md-12">
         <label for="servico" class="form-label">Selecione um serviço</label>
-        <select id="servico" class="form-select" >
+        <select id="servico" class="form-select" required>
+          <option value="">Selecione um serviço</option>
           <option>Lavagem Simples - R$ 35</option>
           <option>Lavagem Completa - R$ 60</option>
           <option>Lavagem Premium - R$ 80</option>
@@ -31,11 +32,11 @@
       </div>
       <div class="col-md-6">
         <label for="data" class="form-label">Data</label>
-        <input type="date" class="form-control" id="data" >
+        <input type="date" class="form-control" id="data" required>
       </div>
       <div class="col-md-6">
         <label for="horario" class="form-label">Horário</label>
-        <select id="horario" class="form-select" >
+        <select id="horario" class="form-select" required>
           <option value="">Selecione um horário</option>
           <option>08:00</option>
           <option>10:00</option>

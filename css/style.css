@@ -395,18 +395,18 @@ body {
   }
   .coluna2 h2 {
     margin-top: 90px;
-    margin-left: 130px;
+    margin-left: 220px;
     font-size: 45px;
   }
   .coluna2 h3 {
     color: blue;
     font-size: 45px;
     font-family: "Inter", Arial;
-    margin-left: 130px;
+    margin-left: 220px;
   }
   .coluna2 p {
     color: #A6ACBE;
-    margin-left: 130px;
+    margin-left: 220px;
     font-size: 16px;
   }
 
@@ -440,7 +440,7 @@ body {
     padding: 10px;
     width: 20%;
     transition: transform 0.3s ease;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
   }
   .coluna4 .btn-2 a {
     text-decoration: none;
@@ -455,6 +455,72 @@ body {
     font-size: 16px;
     color: #A6ACBE;
     font-family: "JetBrains Mono", Arial;
+  }
+  .servicos .row {
+    background-color: #10131F;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 30px 90px 30px;
+    padding: 30px;
+  }
+  .servicos .row #coluna1, .servicos .row #coluna2, .servicos .row #coluna3 {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+  }
+  .servicos .row #coluna1 h2, .servicos .row #coluna2 h2, .servicos .row #coluna3 h2 {
+    font-size: 35px;
+    font-weight: 800;
+    padding: 0 0px 15px 25px;
+  }
+  .servicos .row #coluna1 h3, .servicos .row #coluna2 h3, .servicos .row #coluna3 h3 {
+    font-size: 27px;
+    color: blue;
+    font-family: "Inter", Arial;
+    font-weight: 800;
+  }
+  .servicos .row #coluna1 .btn-1, .servicos .row #coluna2 .btn-1, .servicos .row #coluna3 .btn-1 {
+    background-color: blue;
+    border: 0;
+    text-align: center;
+    margin-left: 25px;
+    padding: 7px;
+    width: 43%;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  .servicos .row #coluna1 .btn-1 a, .servicos .row #coluna2 .btn-1 a, .servicos .row #coluna3 .btn-1 a {
+    font-weight: 800;
+    font-family: "Inter", Arial;
+  }
+  .servicos .row #coluna4 {
+    padding: 10px;
+  }
+  .servicos .row #coluna4 h2 {
+    font-size: 35px;
+    font-weight: 800;
+    padding: 0 0px 15px 25px;
+  }
+  .servicos .row #coluna4 h3 {
+    font-size: 27px;
+    color: blue;
+    font-family: "Inter", Arial;
+    font-weight: 800;
+  }
+  .servicos .row #coluna4 .btn-1 {
+    margin-top: 26px;
+    background-color: blue;
+    border: 0;
+    margin-left: 25px;
+    padding: 7px;
+    width: 43%;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  .servicos .row #coluna4 .btn-1 a {
+    font-weight: 800;
+    font-family: "Inter", Arial;
   }
 
   .sobre .row .img1 {
@@ -525,7 +591,7 @@ body {
     padding: 10px;
     width: 20%;
     transition: transform 0.3s ease;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
   }
   .sobre .row3 .button1 a {
     text-decoration: none;
@@ -544,6 +610,42 @@ body {
   .contato p {
     font-size: 16px;
     font-family: "JetBrains Mono", Arial;
+  }
+  .contato form {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin: 20px 30px 90px 30px;
+  }
+  .contato .form-label {
+    font-size: 16px;
+    color: white;
+    font-family: "JetBrains Mono", Arial;
+  }
+  .contato .form-control {
+    background-color: #10131F;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  .contato .form-control:focus {
+    background-color: #10131F;
+    color: white;
+    border: 1px solid blue;
+    box-shadow: 0 0 5px blue;
+  }
+  .contato .form-control::placeholder {
+    color: white !important;
+    opacity: 1;
+  }
+  .contato button {
+    background-color: blue;
+    padding: 10px;
+    width: 30%;
+    transition: transform 0.3s ease;
+    margin: 20px 0 20px 0;
   }
 
   .agendamento h2 {
@@ -571,6 +673,11 @@ body {
   }
   .agendamento .acrescimos input {
     margin-bottom: 10px;
+  }
+  .agendamento .form-label {
+    font-size: 16px;
+    color: white;
+    font-family: "JetBrains Mono", Arial;
   }
   .agendamento h3 {
     font-size: 40px;
@@ -601,7 +708,7 @@ body {
     padding: 10px;
     width: 30%;
     transition: transform 0.3s ease;
-    margin: -20px 0 70px 0;
+    margin: -15px 0 90px 0;
   }
 
   .footer {
