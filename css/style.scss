@@ -92,7 +92,7 @@ body {
         font-family: "JetBrains Mono", Arial;
         font-size: 13px;
         color: white;
-        margin: 0  30px 0 30px;
+        margin: 10px 30px 10px 30px;
     }
     .btn-1 {
         border: 0;
@@ -129,20 +129,20 @@ body {
     h2 {
         font-weight: 800;
         color: white;
-        font-size: 36px;
+        font-size: 40px;
         margin: 90px 30px 0 30px;
     }
     h3 {
         font-family: "Inter", Arial;
         color: blue;
-        font-size: 36px;
+        font-size: 40px;
         margin: 0  30px 0 30px;
     }
     p {
         font-family: "JetBrains Mono", Arial;
         color: white;
         font-size: 12px;
-        margin: 0  30px 0 30px;
+        margin: 10px 30px 10px 30px;
 
     }
 }
@@ -159,18 +159,18 @@ body {
 .coluna4 {
     h2 {
         font-weight: 800;
-        font-size: 36px;
+        font-size: 37px;
         font-family: "Inter", Arial;
         margin: 150px 0px 0 0px;
     }
     p {
         color: blue;
         font-size: 30px;
-        margin: 0px 30px 0 30px;
+        margin: 10px 30px 10px 30px;
     }
     .descricao {
-        color: #A6ACBE;
-        font-size: 14px;
+        color: white;
+        font-size: 13px;
     }
     .btn-1 {
         border: 0;
@@ -202,6 +202,159 @@ body {
     }
 }
 
+.servicos {
+    h1 {
+        font-size: 40px;
+        font-weight: 800;
+        margin: 0px 30px 0 30px;
+    }
+    p {
+        font-size: 14px;
+        color: #A6ACBE;
+        font-family: "JetBrains Mono", Arial;
+        margin: 10px 30px 10px 30px;
+    }
+}
+
+.sobre {
+    .inicio{
+        font-size: 14px;
+        font-family: "JetBrains Mono", Arial;
+        color: blue;
+        margin: 0px 30px 10px 30px;
+    }
+    h2 {
+        font-size: 40px;
+        font-weight: 800;
+        margin: 0 30px 0 30px;
+        span {
+            color: blue;
+        }
+    }
+    p {
+        font-size: 14px;
+        font-family: "JetBrains Mono", Arial;
+        color: white;
+        margin: 10px 30px 10px 30px;
+    }
+    & &-h2 {
+        padding: 100px 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        font-size: 36px;
+        font-weight: 800;
+        margin: 80px 30px 0 30px;
+    }
+    h3 {
+        font-size: 36px;
+        font-weight: 800;
+        margin: 40px 30px 0 30px;
+    }
+    .button1 {
+        border: 0;
+        font-weight: 800;
+        margin-top: 15px;
+        margin-left: 100px;
+        background-color: blue;
+        padding: 7px;
+        width: 43%;
+        transition: transform 0.3s ease;
+        margin-bottom: 100px;
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+            font-family: "Inter", Arial;
+        }
+    }
+}
+
+.contato {
+    h2 {
+        font-size: 40px;
+        font-weight: 800;
+        margin: 0 30px 0 30px;
+        span {
+            color: blue;
+        }
+    }
+    p {
+        font-size: 14px;
+        font-family: "JetBrains Mono", Arial;
+        color: white;
+        margin: 10px 30px 10px 30px;
+    }
+}
+
+.agendamento {
+    h2 {
+        color: white;
+        font-size: 40px;
+        font-family: "Inter", Arial;
+        font-weight: 800;
+        margin: 0 30px 0 30px;
+        span {
+            color: blue;
+        }
+    }
+    p {
+        font-family: "JetBrains Mono", Arial;
+        font-size: 14px;
+        margin: 10px 30px 10px 30px;
+        color: white;
+    }
+    .form-label {
+        font-size: 14px;
+        color: white;
+        font-family: "JetBrains Mono", Arial;
+    }
+     h4 {
+        font-family: "JetBrains Mono", Arial;
+        font-size: 14px;
+     }
+     .acrescimos {
+        margin-top: 20px;
+        display: block;
+        gap: 40px;
+        input {
+            margin-bottom: 10px;
+        }
+     }
+     h3 {
+        font-size: 30px;
+        color: white;
+        font-weight: 800;
+        text-align: center;
+     }
+     #confirmacao {
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        margin-bottom: 80px;
+        margin-top: 20px;
+        padding: 35px;
+        box-shadow: 5px 5px 30px;
+        button {
+            margin-top: 20px;
+            padding: 8px;
+        }
+     }
+     #total {
+        color: #A6ACBE;
+        margin: 13px 0px 35px 0px;
+     }
+     #btn-ag {
+         button {
+            background-color: blue;
+            padding: 2px;
+            width: 60%;
+            transition: transform 0.3s ease;
+            margin: -20px 0 70px 0;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-family: "Inter", Arial;
+
+         }
+     }
+}
 
 
 @media (min-width: 769px ) {
@@ -300,7 +453,7 @@ body {
             font-size: 16px;
         }
         .btn-1 {
-            margin-left: 450px;
+            margin-left: 500px;
             background-color: blue;
             padding: 10px;
             width: 20%;
@@ -336,50 +489,86 @@ body {
     }
 
     .sobre {
-        .inicio {
-            color: blue;
-            font-family: "JetBrains Mono", Arial;
-            font-size: 14px;
-        }
-        h2 {
-            font-size: 70px;
-            font-weight: 800;
-            span {
+        .row {
+            .img1 {
+                display: block;
+                margin-top: 125px;
+                width: 100%;
+                box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
+            }
+            .inicio {
                 color: blue;
+                font-family: "JetBrains Mono", Arial;
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 70px;
+                font-weight: 800;
+                span {
+                    color: blue;
+                }
+            }
+            p {
+                font-size: 16px;
+                font-family: "JetBrains Mono", Arial;
             }
         }
-        p {
-            font-size: 16px;
-            font-family: "JetBrains Mono", Arial;
-        }
-        & &-h2 {
-            padding: 100px 0 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.10);
-            margin-top: 90px;
-            font-size: 45px;
-            font-weight: 800;
-        }
-        h3 {
-            border-top: 1px solid rgba(255, 255, 255, 0.10);
-            padding: 100px 0 0;
-            margin-top: 90px;
-            font-size: 45px;
-            font-weight: 800;
-        }
-        .button1 {
-            background-color: blue;
-            border: 0;
-            text-align: center;
-            margin-left: 530px;
-            padding: 10px;
-            width: 20%;
-            transition: transform 0.3s ease;
-            margin-bottom: 100px;
-            a {
-                text-decoration: none;
-                color: white;
+        .row {
+            .img2 {
+                width: 100%;
+                margin-top: 200px;
+                box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
+            }
+            & &-h2 {
+                padding: 100px 0 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.10);
+                margin-top: 90px;
+                font-size: 45px;
                 font-weight: 800;
+            }
+            h4 {
+                font-size: 24px;
                 font-family: "Inter", Arial;
+                font-weight: 800;
+                color: white;
+                margin: 10px 30px 10px 30px;
+            }
+            p {
+                font-size: 16px;
+                font-family: "JetBrains Mono", Arial;
+                color: #A6ACBE;
+                margin: 10px 30px 10px 30px;
+            }
+        }
+        .row3 {
+            h3 {
+                border-top: 1px solid rgba(255, 255, 255, 0.10);
+                padding: 100px 0 0;
+                margin-top: 90px;
+                font-size: 45px;
+                font-weight: 800;
+            }
+            p {
+                font-size: 16px;
+                font-family: "JetBrains Mono", Arial;
+                color: #A6ACBE;
+                margin: 10px 30px 10px 30px;
+            }
+            .button1 {
+                background-color: blue;
+                border: 0;
+                text-align: center;
+                margin-left: 530px;
+                padding: 10px;
+                width: 20%;
+                transition: transform 0.3s ease;
+                margin-bottom: 100px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 800;
+                    font-family: "Inter", Arial;
+                }
             }
         }
     }
@@ -411,8 +600,8 @@ body {
         p {
             font-family: "JetBrains Mono", Arial;
             font-size: 16px;
-            margin-bottom: 50px;
             color: #A6ACBE;
+            margin: 20px 30px 40px 30px;
         }
         h4 {
             font-size: 16px;
@@ -427,13 +616,22 @@ body {
         }
         h3 {
             font-size: 40px;
-            margin-top: 130px;
-            color: rgb(92, 160, 255);
+            color: white;
             font-weight: 800;
             text-align: center;
         }
         #confirmacao {
-            margin-bottom: 130px;
+            margin: 80px;
+            padding: 30px;
+            button {
+                margin-left: 12px;
+            }
+            #detalhes {
+                font-family: "JetBrains Mono", Arial;
+                font-size: 16px;
+                color: #A6ACBE;
+                margin: 0px;
+            }
         }
         #total {
             color: #A6ACBE;
@@ -462,10 +660,12 @@ body {
                 font-weight: 800;
             }
             p {
+                font-family: "JetBrains Mono", Arial;
                 font-size: 14px;
             }
         }
         .rodape {
+            font-family: "JetBrains Mono", Arial;
             border-top: 1px solid rgba(255, 255, 255, 0.10);
             text-align: center;
             margin: 20px 0 0px 0;

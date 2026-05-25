@@ -106,8 +106,7 @@
 
       detalhes.textContent = "Obrigado, " + nome +
         ". Seu agendamento foi reservado para " +
-        data + " às " +
-        horario + ".";
+        data + " às " + horario + ".";
       
       form.style.display = "none"; // esconde o formulário
     });
