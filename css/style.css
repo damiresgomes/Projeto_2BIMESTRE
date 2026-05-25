@@ -5,7 +5,7 @@
 
 body {
   background: #10131F;
-  margin-top: 100px;
+  margin-top: 150px;
   font-family: "Inter", Arial;
   color: white;
 }
@@ -308,9 +308,6 @@ body {
     font-size: 70px;
     font-weight: 800;
   }
-  .servicos h1 span {
-    color: blue;
-  }
   .servicos p {
     font-size: 16px;
     color: #A6ACBE;
@@ -374,6 +371,55 @@ body {
   .contato p {
     font-size: 16px;
     font-family: "JetBrains Mono", Arial;
+  }
+
+  .agendamento h2 {
+    color: white;
+    font-size: 70px;
+    font-family: "Inter", Arial;
+    font-weight: 800;
+  }
+  .agendamento h2 span {
+    color: blue;
+  }
+  .agendamento p {
+    font-family: "JetBrains Mono", Arial;
+    font-size: 16px;
+    margin-bottom: 50px;
+    color: #A6ACBE;
+  }
+  .agendamento h4 {
+    font-size: 16px;
+  }
+  .agendamento .acrescimos {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+  }
+  .agendamento .acrescimos input {
+    margin-bottom: 10px;
+  }
+  .agendamento h3 {
+    font-size: 40px;
+    margin-top: 130px;
+    color: #5ca0ff;
+    font-weight: 800;
+    text-align: center;
+  }
+  .agendamento #confirmacao {
+    margin-bottom: 130px;
+  }
+  .agendamento #total {
+    color: #A6ACBE;
+    margin: 40px 0 0 0;
+    margin-bottom: 0px;
+  }
+  .agendamento #btn-ag button {
+    background-color: blue;
+    padding: 10px;
+    width: 30%;
+    transition: transform 0.3s ease;
+    margin: -20px 0 70px 0;
   }
 
   .footer {

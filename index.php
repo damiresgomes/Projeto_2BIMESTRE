@@ -54,7 +54,7 @@
                 </ul>
 
                 <div class="d-flex">
-                    <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#modalLogin">
+                    <a href="agendamento" class="btn">
                         AGENDAMENTO
                     </a>
                 </div>
@@ -108,60 +108,6 @@
 
         <p class="rodape text-center">© 2026 Lava Jato Brito. Todos os direitos reservados.</p>
     </footer>
-
-    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">REALIZE O SEU AGENDAMENTO!</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="nome" class="form-label">Nome Completo</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo:" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="telefone" class="form-label">Telefone</label>
-                            <input type="tel" class="form-control" id="telefone" placeholder="(00) 1234-4321" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="seu@gmail.com" required>
-                        </div>
-                        <div class="col-6">
-                            <label for="veiculo" class="form-label">Veículo/Placa</label>
-                            <input type="text" class="form-control" id="veiculo"
-                                placeholder="Digite modelo e placa:" required>
-                        </div>
-                        
-                        <div class="col-md-12">
-                            <label for="servico" class="form-label">Serviço Desejado</label>
-                            <select id="servico" class="form-select" required>
-                                <option>Selecione uma opção</option>
-                                <option>Lavagem Simples</option>
-                                <option>Lavagem Completa</option>
-                        </div>
-
-                        <div class="col-6">
-                            <label for="data" class="form-label">Data</label>
-                            <input type="date" class="form-control" id="data" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="horario" class="form-label">Horários</label>
-                            <select id="horario" class="form-select" required>
-                                <option>Selecione uma opção</option>
-                                <option>8:00</option>
-                                <option>9:00</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secodary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Enviar</button>
-                </div>
             </div>
         </div>
     </div>

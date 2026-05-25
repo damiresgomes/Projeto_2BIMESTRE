@@ -7,7 +7,7 @@ $primary: #10131F;
 
 body {
     background: $primary;
-    margin-top: 100px;
+    margin-top: 150px;
     font-family: "Inter", Arial;
     color: white;
 }
@@ -327,9 +327,6 @@ body {
         h1 {
             font-size: 70px;
             font-weight: 800;
-            span {
-                color: blue;
-            }
         }
         p {
             font-size: 16px;
@@ -398,6 +395,59 @@ body {
         p {
             font-size: 16px;
             font-family: "JetBrains Mono", Arial;
+        }
+    }
+
+    .agendamento {
+        h2 {
+            color: white;
+            font-size: 70px;
+            font-family: "Inter", Arial;
+            font-weight: 800;
+            span {
+                color: blue;
+            }
+        }
+        p {
+            font-family: "JetBrains Mono", Arial;
+            font-size: 16px;
+            margin-bottom: 50px;
+            color: #A6ACBE;
+        }
+        h4 {
+            font-size: 16px;
+        }
+        .acrescimos {
+            margin-top: 20px;
+            display: flex;
+            gap: 40px;
+            input {
+                margin-bottom: 10px;
+            }
+        }
+        h3 {
+            font-size: 40px;
+            margin-top: 130px;
+            color: rgb(92, 160, 255);
+            font-weight: 800;
+            text-align: center;
+        }
+        #confirmacao {
+            margin-bottom: 130px;
+        }
+        #total {
+            color: #A6ACBE;
+            margin: 40px 0 0 0;
+            margin-bottom: 0px;
+        }
+        #btn-ag {
+            button {
+                background-color: blue;
+                padding: 10px;
+                width: 30%;
+                transition: transform 0.3s ease;
+                margin: -20px 0 70px 0;
+            }
         }
     }
 
