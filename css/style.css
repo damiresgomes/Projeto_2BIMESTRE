@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #10131F;
+  margin-top: 100px;
+  font-family: "Inter", Arial;
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+}
+.navbar-brand .brito {
+  color: blue;
+}
+
+.navbar {
+  background: #10131F !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+}
+.navbar .nav-link {
+  font-weight: 800;
+  font-family: "Inter", Arial;
+  color: #F8F9FB;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.navbar .navbar-toggler {
+  background: white;
+}
+
+.btn {
+  background-color: #1210c0;
+  transition: all 0.5s;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #A6ACBE;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #10131F;
+}
+.footer .row h2 {
+  font-family: "Inter", Arial;
+  font-size: 17px;
+  font-weight: 900;
+}
+.footer .row p {
+  font-family: "Inter", Arial;
+  font-size: 14px;
+}
+
+.row img {
+  display: none;
+}
+.row h3 {
+  font-family: "JetBrains Mono", Arial;
+  font-size: 14px;
+  color: blue;
+  margin: 0  30px 0 30px;
+}
+.row h1 {
+  margin-top: 15px;
+  font-size: 65px;
+  color: white;
+  font-weight: 800;
+  margin: 0  30px 0 27px;
+}
+.row h1 .brito {
+  color: blue;
+}
+.row p {
+  margin-top: 15px;
+  font-family: "JetBrains Mono", Arial;
+  font-size: 13px;
+  color: white;
+  margin: 0  30px 0 30px;
+}
+.row .btn-1 {
+  border: 0;
+  font-weight: 800;
+  margin-top: 15px;
+  margin-left: 25px;
+  background-color: white;
+  padding: 7px;
+  width: 43%;
+  transition: transform 0.3s ease;
+}
+.row .btn-1 a {
+  text-decoration: none;
+  color: black;
+}
+.row .btn-2 {
+  border: 0;
+  font-weight: 800;
+  margin-top: 15px;
+  background-color: #1b233d;
+  padding: 8px;
+  width: 43%;
+  transition: transform 0.3s ease;
+  margin-bottom: 100px;
+}
+.row .btn-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.coluna2 {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.coluna2 h2 {
+  font-weight: 800;
+  color: white;
+  font-size: 36px;
+  margin: 90px 30px 0 30px;
+}
+.coluna2 h3 {
+  font-family: "Inter", Arial;
+  color: blue;
+  font-size: 36px;
+  margin: 0  30px 0 30px;
+}
+.coluna2 p {
+  font-family: "JetBrains Mono", Arial;
+  color: white;
+  font-size: 12px;
+  margin: 0  30px 0 30px;
+}
+
+.coluna3 .coluna3-h2 {
+  color: white;
+}
+.coluna3 p {
+  color: #A6ACBE;
+}
+
+.coluna4 h2 {
+  font-weight: 800;
+  font-size: 36px;
+  font-family: "Inter", Arial;
+  margin: 150px 0px 0 0px;
+}
+.coluna4 p {
+  color: blue;
+  font-size: 30px;
+  margin: 0px 30px 0 30px;
+}
+.coluna4 .descricao {
+  color: #A6ACBE;
+  font-size: 14px;
+}
+.coluna4 .btn-1 {
+  border: 0;
+  font-weight: 800;
+  margin-top: 15px;
+  margin-left: 25px;
+  background-color: white;
+  padding: 7px;
+  width: 43%;
+  transition: transform 0.3s ease;
+}
+.coluna4 .btn-1 a {
+  text-decoration: none;
+  color: black;
+}
+.coluna4 .btn-2 {
+  border: 0;
+  font-weight: 800;
+  margin-top: 15px;
+  background-color: #1b233d;
+  padding: 8px;
+  width: 43%;
+  transition: transform 0.3s ease;
+  margin-bottom: 100px;
+}
+.coluna4 .btn-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 769px) {
+  body {
+    margin-top: 140px;
+  }
+
+  .btn {
+    background-color: #1210c0;
+    transition: all 0.5s;
+    padding: 12px;
+    color: white;
+  }
+
+  .navbar .nav-link {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .row img {
+    display: block;
+  }
+  .row h1 {
+    font-size: 85px;
+    color: white;
+    font-weight: 800;
+  }
+  .row p {
+    font-family: "JetBrains Mono", Arial;
+    font-size: 18px;
+    color: #A6ACBE;
+  }
+  .row .btn-1 {
+    background-color: blue;
+    padding: 5px;
+    width: 25%;
+    transition: transform 0.3s ease;
+  }
+  .row .btn-1 a {
+    text-decoration: none;
+    color: white;
+  }
+  .row .btn-2 {
+    background-color: #1b233d;
+    padding: 6px;
+    width: 26%;
+    transition: transform 0.3s ease;
+    margin-bottom: 100px;
+  }
+  .row .btn-2 a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .coluna2 {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .coluna2 h2 {
+    margin-top: 90px;
+    margin-left: 130px;
+    font-size: 45px;
+  }
+  .coluna2 h3 {
+    color: blue;
+    font-size: 45px;
+    font-family: "Inter", Arial;
+    margin-left: 130px;
+  }
+  .coluna2 p {
+    color: #A6ACBE;
+    margin-left: 130px;
+    font-size: 16px;
+  }
+
+  .coluna4 h2 {
+    font-weight: 800;
+    font-size: 45px;
+    font-family: "Inter", Arial;
+  }
+  .coluna4 p {
+    color: blue;
+    font-size: 42px;
+    font-family: "Inter", Arial;
+  }
+  .coluna4 .descricao {
+    color: #A6ACBE;
+    font-size: 16px;
+  }
+  .coluna4 .btn-1 {
+    margin-left: 450px;
+    background-color: blue;
+    padding: 10px;
+    width: 20%;
+    transition: transform 0.3s ease;
+  }
+  .coluna4 .btn-1 a {
+    text-decoration: none;
+    color: white;
+  }
+  .coluna4 .btn-2 {
+    background-color: #1b233d;
+    padding: 10px;
+    width: 20%;
+    transition: transform 0.3s ease;
+    margin-bottom: 100px;
+  }
+  .coluna4 .btn-2 a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .servicos h1 {
+    font-size: 70px;
+    font-weight: 800;
+  }
+  .servicos h1 span {
+    color: blue;
+  }
+  .servicos p {
+    font-size: 16px;
+    color: #A6ACBE;
+    font-family: "JetBrains Mono", Arial;
+  }
+
+  .sobre .inicio {
+    color: blue;
+    font-family: "JetBrains Mono", Arial;
+    font-size: 14px;
+  }
+  .sobre h2 {
+    font-size: 70px;
+    font-weight: 800;
+  }
+  .sobre h2 span {
+    color: blue;
+  }
+  .sobre p {
+    font-size: 16px;
+    font-family: "JetBrains Mono", Arial;
+  }
+  .sobre .sobre-h2 {
+    padding: 100px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 90px;
+    font-size: 45px;
+    font-weight: 800;
+  }
+  .sobre h3 {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 100px 0 0;
+    margin-top: 90px;
+    font-size: 45px;
+    font-weight: 800;
+  }
+  .sobre .button1 {
+    background-color: blue;
+    border: 0;
+    text-align: center;
+    margin-left: 530px;
+    padding: 10px;
+    width: 20%;
+    transition: transform 0.3s ease;
+    margin-bottom: 100px;
+  }
+  .sobre .button1 a {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-family: "Inter", Arial;
+  }
+
+  .contato h2 {
+    font-size: 60px;
+    font-weight: 800;
+  }
+  .contato h2 span {
+    color: blue;
+  }
+  .contato p {
+    font-size: 16px;
+    font-family: "JetBrains Mono", Arial;
+  }
+
+  .footer {
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #A6ACBE;
+    font-family: "Inter", Arial;
+  }
+  .footer .row h2 {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .footer .row p {
+    font-size: 14px;
+  }
+  .footer .rodape {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: 20px 0 0px 0;
+    padding: 20px 0 20px 0;
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
