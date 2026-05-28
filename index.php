@@ -11,7 +11,7 @@
         rel="stylesheet">
     <title>Lava Jato Brito</title>
 
-    <base href="#">
+    <base href="http://localhost:8080/Projeto_2BIMESTRE/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">LAVA JATO <span class="brito">BRITO</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
