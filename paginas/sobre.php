@@ -21,8 +21,8 @@
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <h2 class="sobre-h2">PRINCÍPIOS QUE GUIAM<br> CADA SERVIÇO.</h2>
-                    <h4>Excelência sem atalhos</h4>
+                <h2 class="h6">PRINCÍPIOS QUE GUIAM<br> CADA SERVIÇO.</h2>
+                    <h4 class="h4">Excelência sem atalhos</h4>
                     <p>Métodos profissionais, produtos premium e zero tolerância a entregas medianas.</p>
                     <br>
                     <h4>Domínio técnico</h4>
@@ -45,7 +45,7 @@
                 <h3 class="text-center">VENHAM SENTIR A DIFERENÇA</h3>
                 <p class="text-center">Reserve seu horário e descubra por que somos a escolha de quem entende <br> de carro.</p>
                 <button class="button1 text-center">
-                    <a href="agendamento.php">
+                    <a href="agendamento">
                         AGENDE AGORA
                     </a>
                 </button>

@@ -3,40 +3,40 @@
     <h2>REALIZE SEU <br><span>AGENDAMENTO ONLINE</span></h2>
     <p>Agende um horário para cuidar do seu carro.</p>
 
-    <form id="formAgendamento" class="row g-3">
+    <form id="formAgendamento" class="row g-3" method="post">
       <div class="col-md-6">
         <label for="nome" class="form-label">Nome Completo</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required>
       </div>
       <div class="col-md-6">
         <label for="telefone" class="form-label">WhatsApp</label>
-        <input type="text" class="form-control" id="telefone" placeholder="(11) 99999-9999" required>
+        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
       </div>
       <div class="col-md-6">
         <label for="email" class="form-label">E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="seu.email@exemplo.com" required>
+        <input type="email" class="form-control" id="email" name="email" placeholder="seu.email@exemplo.com" required>
       </div>
       <div class="col-md-6">
         <label for="veiculo" class="form-label">Veículo/Placa</label>
-        <input type="text" class="form-control" id="veiculo" placeholder="Ex: Corolla Cinza ABC-1234" required>
+        <input type="text" class="form-control" id="veiculo" name="veiculo" placeholder="Ex: Corolla Cinza ABC-1234" required>
       </div>
       <div class="col-md-12">
         <label for="servico" class="form-label">Selecione um serviço</label>
-        <select id="servico" class="form-select" required>
+        <select id="servico" name="servico" class="form-select" required>
           <option value="">Selecione um serviço</option>
-          <option>Lavagem Simples - R$ 35</option>
-          <option>Lavagem Completa - R$ 60</option>
-          <option>Lavagem Premium - R$ 80</option>
-          <option>Lavagem Polimento - R$ 100</option>
+          <option value="35">Lavagem Simples - R$ 35</option>
+          <option value="60">Lavagem Completa - R$ 60</option>
+          <option value="80">Lavagem Premium - R$ 80</option>
+          <option value="100">Lavagem Polimento - R$ 100</option>
         </select>
       </div>
       <div class="col-md-6">
         <label for="data" class="form-label">Data</label>
-        <input type="date" class="form-control" id="data" required>
+        <input type="date" class="form-control" id="data" name="data" required>
       </div>
       <div class="col-md-6">
         <label for="horario" class="form-label">Horário</label>
-        <select id="horario" class="form-select" required>
+        <select id="horario" name="horario" class="form-select" required>
           <option value="">Selecione um horário</option>
           <option>08:00</option>
           <option>10:00</option>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="col-12">
-        <p id="total">TOTAL ESTIMADO: R$ 35</p>
+        <p id="total">TOTAL ESTIMADO: R$ 0</p>
       </div>
 
       <div id="btn-ag" class="col-12 text-center">
@@ -78,25 +78,24 @@
     const confirmacao = document.getElementById("confirmacao");
     const detalhes = document.getElementById("detalhes");
 
-    // função para extrair o preço do serviço selecionado
-    function getPrecoServico() {
-    const servico = document.getElementById("servico").value;
-    // procura número dentro do texto (ex: "Lavagem Completa - R$ 60")
-    const match = servico.match(/R\$ ?(\d+)/);
-    return match ? parseInt(match[1]) : 0;
-  }
+    function PrecoServico() {
+      return parseInt(document.getElementById("servico").value) || 0;
+    }
 
-    // recalcula total quando marca/desmarca acréscimos
+
     form.addEventListener("change", () => {
-      let soma = getPrecoServico();
+      let soma = PrecoServico();
       const checkboxes = form.querySelectorAll("input[type=checkbox]");
+
       checkboxes.forEach(cb => {
         if (cb.checked) soma += parseInt(cb.value);
       });
+
       total.textContent = "TOTAL ESTIMADO: R$ " + soma;
     });
 
-    // ao enviar o formulário
+
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       confirmacao.style.display = "block";
@@ -109,8 +108,10 @@
         ". Seu agendamento foi reservado para " +
         data + " às " + horario + ".";
       
-      form.style.display = "none"; // esconde o formulário
+      form.style.display = "none";
+      
     });
+
 
     function abrirWhatsapp() {
       window.open("https://wa.me/5511981392929", "_blank");
