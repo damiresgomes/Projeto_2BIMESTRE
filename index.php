@@ -27,7 +27,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">LAVA JATO <span class="brito">BRITO</span></a>
+            <a class="navbar-brand" href="index.php">BRITO <span class="brito">ESTÉTICA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -80,12 +80,12 @@
         ?>
     </main>
 
-    <footer class="footer">
+    <!--<footer class="footer">
         <div class="container text-center">
             <div class="row">
                 <div class="col">
                     <h2>CONTATO</h2>
-                    <p>Telefone: (19) 9 1234-4321 <br>
+                    <p>Telefone: (19) 9 8133-9017 ou (19) 9  <br>
                         Email: contato@lavajatobrito</p>
                 </div>
 
@@ -97,8 +97,8 @@
 
                 <div class="col">
                     <h2>ENDEREÇO</h2>
-                    <p>Avenida invernada, 1341 <br>
-                        Valinhos - São Paulo, SP</p>
+                    <p>Avenida Ana Lombardini Gasparini, 77 <br>
+                        Vinhedo - São Paulo, SP</p>
                 </div>
 
                 <div class="col">
@@ -107,12 +107,8 @@
             </div>
         </div>
 
-        <p class="rodape text-center">© 2026 Lava Jato Brito. Todos os direitos reservados.</p>
-    </footer>
-            </div>
-        </div>
-    </div>
-
+        <p class="rodape text-center">© 2026 Brito Estética Automotiva. Todos os direitos reservados.</p>
+    </footer>-->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/fslightbox.js"></script>
 </body>

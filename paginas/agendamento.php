@@ -13,21 +13,26 @@
         <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
       </div>
       <div class="col-md-6">
-        <label for="email" class="form-label">E-mail</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+        <label for="placa" class="form-label">Placa</label>
+        <input type="text" class="form-control" id="placa" name="placa" placeholder="ABC-1234" required>
       </div>
       <div class="col-md-6">
-        <label for="veiculo" class="form-label">Veículo/Placa</label>
-        <input type="text" class="form-control" id="veiculo" name="veiculo" placeholder="Ex: Corolla Cinza ABC-1234" required>
+        <label for="veiculo" class="form-label">Veículo</label>
+        <input type="text" class="form-control" id="veiculo" name="veiculo" placeholder="Ex: Corolla Cinza 2022" required>
       </div>
       <div class="col-md-12">
         <label for="servico" class="form-label">Selecione um serviço</label>
         <select id="servico" name="servico" class="form-select" required>
           <option value="">Selecione um serviço</option>
-          <option value="35">Lavagem Simples - R$ 35</option>
-          <option value="60">Lavagem Completa - R$ 60</option>
-          <option value="80">Lavagem Premium - R$ 80</option>
-          <option value="100">Lavagem Polimento - R$ 100</option>
+          <option value="">Lavagem Detalhada - R$ 80 - 150</option>
+          <option value="">Higienização Interna Completa - R$ 600 - 1200</option>
+          <option value="">Restauração de Faróis - R$ 120 - 250</option>
+          <option value="">Polimento Comercial - R$ 350 - 700</option>
+          <option value="">Limpeza de Motor - R$ 180 - 400</option>
+          <option value="">Polimento Técnico + Vitrificação - R$ 1200 - 3000</option>
+          <option value="">Vitrificação de Plástico - R$ 450 - 900</option>
+          <option value="">Limpeza de Chassi - R$ 200 - 500</option>
+          <option value="">Higienização dos Bancos - R$ 350 - 800</option>
         </select>
       </div>
       <div class="col-md-6">
@@ -39,19 +44,36 @@
         <select id="horario" name="horario" class="form-select" required>
           <option value="">Selecione um horário</option>
           <option>08:00</option>
+          <option>08:30</option>
+          <option>09:00</option>
+          <option>09:30</option>
           <option>10:00</option>
+          <option>10:30</option>
+          <option>11:00</option>
+          <option>11:30</option>
+          <option>12:00</option>
+          <option>12:30</option>
+          <option>13:00</option>
+          <option>13:30</option>
           <option>14:00</option>
+          <option>14:30</option>
+          <option>15:00</option>
+          <option>15:30</option>
+          <option>16:00</option>
+          <option>16:30</option>
+          <option>17:00</option>
+          <option>17:30</option>
         </select>
       </div>
 
       <div class="col-12">
         <h4>Acréscimos Opcionais</h4>
         <div class="acrescimos">
-          <input type="checkbox" id="polimento" value="90"> Polimento Técnico <br> (+R$ 90)<br>
-          <input type="checkbox" id="couro" value="70"> Hidratação de Couro <br>(+R$ 70)<br>
-          <input type="checkbox" id="vidros" value="50"> Cristalização de Vidros <br>(+R$ 50)<br>
-          <input type="checkbox" id="motor" value="80"> Lavagem do Motor <br>(+R$ 80)<br>
-          <input type="checkbox" id="ozonio" value="20"> Cera Líquida (Vonixx) <br>(+R$ 20)<br>
+          <input type="checkbox" id="polimento" value="90"> Polimento Técnico <br><br>
+          <input type="checkbox" id="couro" value="70"> Hidratação de Couro <br><br>
+          <input type="checkbox" id="vidros" value="50"> Cristalização de Vidros <br><br>
+          <input type="checkbox" id="motor" value="80"> Limpeza do Motor <br><br>
+          <input type="checkbox" id="ozonio" value="20"> Cera Líquida <br><br>
         </div>
       </div>
 

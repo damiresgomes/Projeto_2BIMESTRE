@@ -1,8 +1,8 @@
 <?php
-$servername = "192.168.1.100";  //IP do Servidor
-$username = "usuario_remoto";
-$password = "senha_segura";
-$dbname = "meu_banco_de_dados";
+$servername = "10.0.2.15";
+$username = "britoesteticca";
+$password = "brito28045";
+$dbname = "projeto2bimestre";
 
 //criar conexão usando MySQL
 $conn = new mysqli($servername, $username, $password, $dbname);

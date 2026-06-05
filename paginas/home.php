@@ -3,7 +3,7 @@
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <h3>BEM-VINDOS AO LAVA JATO BRITO</h3>
+                <h3>ESTÉTICA AUTOMOTIVA DE PRECISÃO</h3>
                 <h1>O BRILHO <br> QUE SEU <br> CARRO <br> <span class="brito">MERECE</span></h1>
 
                 <p>Estética automotiva de alto padrão com <br> agendamento simplificado. Cuidamos de <br> cada detalhe com
@@ -31,7 +31,7 @@
     <div class="coluna2">
         <div class="col-12 col-md-6">
             <h2>PORQUE ESCOLHER</h2>
-            <h3><i>O LAVA JATO BRITO?</i></h3>
+            <h3><i>BRITO ESTÉTICA AUTOMOTIVA?</i></h3>
         </div>
 
         <div class="col-12 col-md-6">

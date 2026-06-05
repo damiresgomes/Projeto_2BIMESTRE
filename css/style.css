@@ -577,15 +577,16 @@ body {
     background-color: #0c122c;
   }
   .servicos .row {
+    row-gap: 60px;
     background-color: #060a1e;
+    margin: 20px 30px 90px 30px;
+    height: 480px;
+  }
+  .servicos .row #coluna1, .servicos .row #coluna2, .servicos .row #coluna3 {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 20px 30px 90px 30px;
-    height: 470px;
-  }
-  .servicos .row #coluna1, .servicos .row #coluna2, .servicos .row #coluna3 {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     padding: 10px;
   }
