@@ -1,3 +1,9 @@
+<?php
+require "config.php";
+
+$base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"]; //pega o nome do servidor e o nome do script
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,12 +12,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <title>Lava Jato Brito</title>
 
-    <base href="http://localhost:8080/Projeto_2BIMESTRE/">
+    <base href="<?= $base ?>">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +28,13 @@
 
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">BRITO <span class="brito">ESTÉTICA</span></a>
+            <a class="navbar-brand" href="index.php">BRITO <span class="span">ESTÉTICA</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -55,7 +62,7 @@
                 </ul>
 
                 <div class="d-flex">
-                    <a href="agendamento" class="btn">
+                    <a href="agendamento" class="btn-agendamento">
                         AGENDAMENTO
                     </a>
                 </div>
@@ -80,12 +87,14 @@
         ?>
     </main>
 
-    <!--<footer class="footer">
+    <div class="clearfix"></div>
+
+    <footer class="footer">
         <div class="container text-center">
             <div class="row">
                 <div class="col">
                     <h2>CONTATO</h2>
-                    <p>Telefone: (19) 9 8133-9017 ou (19) 9  <br>
+                    <p>Telefone: (19) 9 8133-9017<br>
                         Email: contato@lavajatobrito</p>
                 </div>
 
@@ -108,7 +117,7 @@
         </div>
 
         <p class="rodape text-center">© 2026 Brito Estética Automotiva. Todos os direitos reservados.</p>
-    </footer>-->
+    </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/fslightbox.js"></script>
 </body>

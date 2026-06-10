@@ -1,15 +1,15 @@
 <?php
-$servername = "10.0.2.15";
-$username = "britoesteticca";
-$password = "brito28045";
-$dbname = "projeto2bimestre";
+    //conectar no banco de dados
 
-//criar conexão usando MySQL
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $dbname = "brito_estetica";
 
-//verificar conexão
-if ($conn->connect_error){
-    die("Falha na conexão: " . $conn->connect_error);
+    try {
+          $pdo = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $user, $pass);
+    } catch (PDOException $e) {
+        die("Erro ao conectar" . $e->getMessage());
+        
     }
-    echo "Conectado com sucesso ao banco externo!";
 ?>

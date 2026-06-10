@@ -1,9 +1,54 @@
+<?php
+include 'config.php';
+
+if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome     = $_POST["nome"];
+    $telefone = $_POST["telefone"];
+    $placa    = $_POST["placa"];
+    $veiculo  = $_POST["veiculo"];
+    $data     = $_POST["data"];
+    $horario  = $_POST["horario"];
+    $servico  = $_POST["servico"];
+    $extras   = isset($_POST["extras"]) ? $_POST["extras"] : [];
+
+    $sql_cliente = "INSERT INTO clientes (nome, telefone) VALUES ('$nome', '$telefone')";
+    if ($conn->query($sql_cliente) === TRUE) {
+        $id_cliente = $conn->insert_id;
+
+        $data_hora = $data . " " . $horario;
+        $sql_agendamento = "INSERT INTO agendamentos (id_cliente, data_hora, placa_veiculo, modelo_veiculo)
+                            VALUES ('$id_cliente', '$data_hora', '$placa', '$veiculo')";
+        if ($conn->query($sql_agendamento) === TRUE) {
+            $id_agendamento = $conn->insert_id;
+
+            $conn->query("INSERT INTO agendamento_servico (id_agendamento, id_servico)
+                          VALUES ('$id_agendamento', '$servico')");
+
+            foreach ($extras as $id_servico_extra) {
+                $conn->query("INSERT INTO agendamento_servico (id_agendamento, id_servico)
+                              VALUES ('$id_agendamento', '$id_servico_extra')");
+            }
+
+            echo "<p style='color:green'>Agendamento salvo com sucesso!</p>";
+        } else {
+            echo "Erro ao salvar agendamento: " . $conn->error;
+        }
+    } else {
+        echo "Erro ao salvar cliente: " . $conn->error;
+    }
+}
+?>
+
 <div class="container">
 <div class="agendamento">
     <h2>REALIZE SEU <br><span>AGENDAMENTO ONLINE</span></h2>
     <p>Agende um horário para cuidar do seu carro.</p>
 
-    <form id="formAgendamento" class="row g-3" method="post">
+    <form id="formAgendamento" class="row g-3" action="agendamento.php" method="post">
       <div class="col-md-6">
         <label for="nome" class="form-label">Nome Completo</label>
         <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required>
@@ -24,15 +69,15 @@
         <label for="servico" class="form-label">Selecione um serviço</label>
         <select id="servico" name="servico" class="form-select" required>
           <option value="">Selecione um serviço</option>
-          <option value="">Lavagem Detalhada - R$ 80 - 150</option>
-          <option value="">Higienização Interna Completa - R$ 600 - 1200</option>
-          <option value="">Restauração de Faróis - R$ 120 - 250</option>
-          <option value="">Polimento Comercial - R$ 350 - 700</option>
-          <option value="">Limpeza de Motor - R$ 180 - 400</option>
-          <option value="">Polimento Técnico + Vitrificação - R$ 1200 - 3000</option>
-          <option value="">Vitrificação de Plástico - R$ 450 - 900</option>
-          <option value="">Limpeza de Chassi - R$ 200 - 500</option>
-          <option value="">Higienização dos Bancos - R$ 350 - 800</option>
+          <option value="1">Lavagem Detalhada - R$ 80 - 150</option>
+          <option value="2">Higienização Interna Completa - R$ 600 - 1200</option>
+          <option value="3">Restauração de Faróis - R$ 120 - 250</option>
+          <option value="4">Polimento Comercial - R$ 350 - 700</option>
+          <option value="5">Limpeza de Motor - R$ 180 - 400</option>
+          <option value="6">Polimento Técnico + Vitrificação - R$ 1200 - 3000</option>
+          <option value="7">Vitrificação de Plástico - R$ 450 - 900</option>
+          <option value="8">Limpeza de Chassi - R$ 200 - 500</option>
+          <option value="9">Higienização dos Bancos - R$ 350 - 800</option>
         </select>
       </div>
       <div class="col-md-6">
@@ -69,11 +114,11 @@
       <div class="col-12">
         <h4>Acréscimos Opcionais</h4>
         <div class="acrescimos">
-          <input type="checkbox" id="polimento" value="90"> Polimento Técnico <br><br>
-          <input type="checkbox" id="couro" value="70"> Hidratação de Couro <br><br>
-          <input type="checkbox" id="vidros" value="50"> Cristalização de Vidros <br><br>
-          <input type="checkbox" id="motor" value="80"> Limpeza do Motor <br><br>
-          <input type="checkbox" id="ozonio" value="20"> Cera Líquida <br><br>
+          <input type="checkbox" name="extras[]" value="10"> Polimento Técnico <br><br>
+          <input type="checkbox" name="extras[]" value="11"> Hidratação de Couro <br><br>
+          <input type="checkbox" name="extras[]" value="12"> Cristalização de Vidros <br><br>
+          <input type="checkbox" name="extras[]" value="13"> Limpeza do Motor <br><br>
+          <input type="checkbox" name="extras[]" value="14"> Cera Líquida <br><br>
         </div>
       </div>
 
@@ -94,7 +139,7 @@
     </div>
   </div>
 
-  <script>
+    <script>
     const form = document.getElementById("formAgendamento");
     const total = document.getElementById("total");
     const confirmacao = document.getElementById("confirmacao");
@@ -103,7 +148,6 @@
     function PrecoServico() {
       return parseInt(document.getElementById("servico").value) || 0;
     }
-
 
     form.addEventListener("change", () => {
       let soma = PrecoServico();
@@ -115,8 +159,6 @@
 
       total.textContent = "TOTAL ESTIMADO: R$ " + soma;
     });
-
-
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -133,7 +175,6 @@
       form.style.display = "none";
       
     });
-
 
     function abrirWhatsapp() {
       window.open("https://wa.me/5511981392929", "_blank");

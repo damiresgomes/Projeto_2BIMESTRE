@@ -1,4 +1,7 @@
 $primary: #060a1e;
+$colorBlue: blue;
+$font1: "Inter", Arial;
+$font2: "JetBrains Mono", Arial;
 
 * {
     margin: 0;
@@ -7,17 +10,20 @@ $primary: #060a1e;
 
 body {
     background: $primary;
-    margin-top: 150px;
-    font-family: "Inter", Arial;
+    font-family: $font1;
     color: white;
+    margin-top: 150px;
+    .span {
+        color: $colorBlue;
+    }
 }
 
 .navbar-brand {
     color: white;
     font-size: 24px;
     font-weight: 800;
-    .brito {
-        color: blue;
+    &:hover {
+        color: #FFF;
     }
 }
 
@@ -28,46 +34,31 @@ body {
     top: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
     padding: 20px;
-    & .nav-link {
-        font-weight: 800;
-        font-family: "Inter", Arial;
-        color: #F8F9FB;
-        font-size: 16px;
+        & .nav-link {
+            font-weight: 800;
+            font-family: "Inter", Arial;
+            color: #F8F9FB;
+            font-size: 16px;
+            transition: all 0.5s;
+        }
+        & .navbar-toggler {
+            background: white;
+            border-radius: 0;
+        }
+        .btn-agendamento {
+        background-color: #1210c0;
         transition: all 0.5s;
-    }
-    & .navbar-toggler {
-        background: white;
-        border-radius: 0;
-    }
-}
-
-.btn {
-    background-color: #1210c0;
-    transition: all 0.5s;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-radius: 0;
-}
-
- .footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-    color: #A6ACBE;
-    padding: 20px;
-    box-sizing: border-box;
-    background: $primary;
-    .row {
-        h2 {
-            font-family: "Inter", Arial;
-            font-size: 17px;
-            font-weight: 900;
-        }
-        p {
-            font-family: "Inter", Arial;
-            font-size: 14px;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        border-radius: 5px;
+        text-decoration: none;
+        &:hover {
+            background-color: #3460e4;
         }
     }
 }
+
 
 .home {
     .row {
@@ -75,24 +66,21 @@ body {
             display: none;
         }
         h3 {
-            font-family: "JetBrains Mono", Arial;
+            font-family: $font2;
             font-size: 14px;
-            color: blue;
-            margin: 0  30px 0 30px;
+            color: $colorBlue;
+            margin: 0 30px 0 30px;
         }
         h1 {
             margin-top: 15px;
             font-size: 65px;
             color: white;
             font-weight: 800;
-            margin: 0  30px 0 27px;
-            .brito {
-                color: blue;
-            }
+            margin: 0  30px 0 30px;
         }
         p {
             margin-top: 15px;
-            font-family: "JetBrains Mono", Arial;
+            font-family: $font2;
             font-size: 13px;
             color: white;
             margin: 10px 30px 10px 30px;
@@ -128,175 +116,220 @@ body {
             }
         }
     }
-}
-
-.servicos {
-    h2 {
-        margin: 30px 0px 0 0px;
-        padding: 30px;
+    .segunda-coluna {
         border-top: 1px solid rgba(255, 255, 255, 0.10);
-    }
-}
-
-.sobre {
-    h4 {
-        border-top: 1px solid rgba(255, 255, 255, 0.10);
-        margin: 0 30px 0 30px;
-        padding: 30px 0 0 0;
-    }
-    h3 {
-        border-top: 1px solid rgba(255, 255, 255, 0.10);
-        padding: 50px 0 0 0;
-    }
-}
-
-.contato {
-    form {
-        margin: 0 20px 0 20px;
-        input, textarea {
-            border-radius: 0;
-        }
-    }
-}
-
-.agendamento {
-    form {
-        margin: 0 20px 0 20px;
-        input, select, textarea {
-            border-radius: 0;
-        }
-    }
-}
-
-.coluna2 {
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-    h2 {
-        font-weight: 800;
-        color: white;
-        font-size: 40px;
-        margin: 90px 30px 0 30px;
-    }
-    h3 {
-        font-family: "Inter", Arial;
-        color: blue;
-        font-size: 40px;
-        margin: 0  30px 0 30px;
-    }
-    p {
-        font-family: "JetBrains Mono", Arial;
-        color: white;
-        font-size: 12px;
-        margin: 10px 30px 10px 30px;
-
-    }
-    .row {
-        margin: 70px 40px 70px 40px;
-    }
-}
-
-.coluna3 {
-    & &-h2 {
-        color: white;
-    }
-    p {
-        color: #A6ACBE;
-    }
-}
-
-.coluna4 {
-    h2 {
-        font-weight: 800;
-        font-size: 37px;
-        font-family: "Inter", Arial;
-        margin: 150px 0px 0 0px;
-    }
-    p {
-        color: blue;
-        font-size: 30px;
-        margin: 10px 30px 10px 30px;
-    }
-    .descricao {
-        color: white;
-        font-size: 13px;
-    }
-    .btn-1 {
-        border: 0;
-        border-radius: 0;
-        font-weight: 800;
-        margin-top: 15px;
-        margin-left: 25px;
-        background-color: white;
-        padding: 7px;
-        width: 43%;
-        transition: transform 0.3s ease;
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    }
-    .btn-2 {
-        border: 0;
-        border-radius: 0;
-        font-weight: 800;
-        margin-top: 15px;
-        background-color: #1b233d;
-        padding: 8px;
-        width: 43%;
-        transition: transform 0.3s ease;
-        margin-bottom: 100px;
-        a {
-            text-decoration: none;
+        h2 {
+            font-weight: 800;
             color: white;
+            font-size: 40px;
+            margin: 90px 30px 0 30px;
+        }
+        h3 {
+            font-family: $font1;
+            color: $colorBlue;
+            font-size: 40px;
+            margin: 0  30px 0 30px;
+        }
+        p {
+            font-family: $font2;
+            color: white;
+            font-size: 12px;
+            margin: 10px 30px 10px 30px;
+
+        }
+    }
+    #terceira-coluna {
+        .row {
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            margin: 80px 30px 60px 30px;
+            background-color: $primary;
+            #coluna1, #coluna2, #coluna3 {
+                padding: 10px;
+                border-right: 1px solid rgba(255, 255, 255, 0.10);
+                h2 {
+                    margin-top: 20px;
+                    font-size: 25px;
+                    font-weight: 800;
+                    font-family: $font1;
+                    
+                }
+            }
+            #coluna4 {
+                padding: 10px;
+                h2 {
+                    margin-top: 20px;
+                    font-size: 25px;
+                    font-weight: 800;
+                    font-family: $font1;
+                }
+                p {
+                    border-bottom: 0;
+                }
+            }
+        }
+        p {
+            padding: 0px 0 35px 0px;
+            font-size: 16px;
+            color: #A6ACBE;
+            font-family: $font2;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+        }
+        h6 {
+            margin-top: 5px;
+            color: #0032c8;
+            font-size: 14px;
+            margin-right: 250px;
+            padding: 10px;
+        }
+        
+    }
+
+    .quarta-coluna {
+        h2 {
+            font-weight: 800;
+            font-size: 37px;
+            font-family: $font1;
+            margin: 150px 0px 0 0px;
+        }
+        p {
+            color: $colorBlue;
+            font-size: 30px;
+            margin: 10px 30px 10px 30px;
+        }
+        .descricao {
+            color: white;
+            font-size: 13px;
+        }
+        .btn-1 {
+            border: 0;
+            border-radius: 5px;
+            font-weight: 800;
+            margin-top: 15px;
+            margin-left: 25px;
+            background-color: white;
+            padding: 7px;
+            width: 43%;
+            transition: transform 0.3s ease;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+        .btn-2 {
+            border: 0;
+            border-radius: 5px;
+            font-weight: 800;
+            margin-top: 15px;
+            background-color: #1b233d;
+            padding: 8px;
+            width: 43%;
+            transition: transform 0.3s ease;
+            margin-bottom: 100px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 }
 
 .servicos {
     h1 {
-        font-size: 40px;
+        font-size: 50px;
         font-weight: 800;
         margin: 0px 30px 0 30px;
     }
     p {
         font-size: 14px;
         color: #A6ACBE;
-        font-family: "JetBrains Mono", Arial;
+        font-family: $font2;
         margin: 10px 30px 10px 30px;
     }
-    h2 {
-        border: 0;
+    h3 {
+        color: white;
+        font-size: 35px;
+        font-weight: 800;
+        padding: 0 0px 15px 25px;
+        margin: 0;
     }
-}
+    .card {
+        background-color: $primary;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    .row {
+        row-gap: 60px;
+        margin: 20px 30px 90px 30px;
+        height: 480px;
+            .preco {
+                display: flex;
+                align-items: baseline;
+                gap: 4px;
+                p {
+                    margin: 0;
+                    margin-left: 27px;
+                    font-size: 14px;
+                }
+                h4 {
+                    font-size: 25px;
+                    color: blue;
+                    font-family: "Inter", Arial;
+                    font-weight: 800;
+                    margin-left: 30px;
+                    margin: 0;
+                }
+            }
+            .duracao {
+                margin-top: 10px;
+                font-size: 12px;
+                color: #A6ACBE;
+                margin-left: 27px;
+                .fa fa-clock {
+                    color: #A6ACBE;
+                }
+            }
+        }
+    }
 
 .sobre {
     .inicio{
         font-size: 14px;
-        font-family: "JetBrains Mono", Arial;
-        color: blue;
+        font-family: $font2;
+        color: $colorBlue;
         margin: 0px 30px 10px 30px;
     }
     h2 {
         font-size: 40px;
         font-weight: 800;
         margin: 0 30px 0 30px;
-        span {
-            color: blue;
-        }
     }
-    p {
+     p {
         font-size: 14px;
-        font-family: "JetBrains Mono", Arial;
+        font-family: $font2;
         color: white;
         margin: 10px 30px 10px 30px;
     }
-    & &-h2 {
+    .img1, .img2 {
+        display: none;
+    }
+    h4 {
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        margin: 0 30px 0 30px;
+        padding: 30px 0 0 0;
+        font-weight: 800;
+    }
+    h6 {
+        font-size: 40px;
+        font-weight: 800;
         padding: 100px 0 0;
         border-top: 1px solid rgba(255, 255, 255, 0.10);
         font-size: 36px;
         font-weight: 800;
         margin: 80px 30px 0 30px;
     }
+   
     h3 {
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        padding: 50px 0 0 0;
         font-size: 36px;
         font-weight: 800;
         margin: 40px 30px 0 30px;
@@ -307,7 +340,7 @@ body {
         font-weight: 800;
         margin-top: 15px;
         margin-left: 100px;
-        background-color: blue;
+        background-color: $colorBlue;
         padding: 7px;
         width: 43%;
         transition: transform 0.3s ease;
@@ -316,7 +349,7 @@ body {
             text-decoration: none;
             color: white;
             font-weight: 800;
-            font-family: "Inter", Arial;
+            font-family: $font1;
         }
     }
 }
@@ -326,23 +359,51 @@ body {
         font-size: 40px;
         font-weight: 800;
         margin: 0 30px 0 30px;
-        span {
-            color: blue;
-        }
     }
     p {
         font-size: 14px;
-        font-family: "JetBrains Mono", Arial;
+        font-family: $font2;
         color: white;
         margin: 10px 30px 10px 30px;
     }
+    form {
+        font-family: $font2;
+        margin: 0 20px 0 20px;
+        .form-control {
+            background-color: $primary;
+            color: white;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                transition: all 0.3s ease;
+                &:focus {
+                background-color: $primary;
+                color: white;
+                border: 1px solid $colorBlue;
+                box-shadow: 0 0 5px $colorBlue;
+            }
+            &::placeholder {
+                color: white !important;
+                opacity: 1;
+            }
+        }
+    }
+    button {
+        background-color: $colorBlue;
+        padding: 10px;  
+        width: 60%;
+        transition: transform 0.3s ease;
+        margin: 20px 0 70px 0;
+        border-radius: 0px;
+        font-family: $font1;
+        font-weight: 800;
+    }
 }
+    
 
 .agendamento {
     h2 {
         color: white;
         font-size: 40px;
-        font-family: "Inter", Arial;
+        font-family: $font1;
         font-weight: 800;
         margin: 0 30px 0 30px;
         span {
@@ -350,7 +411,7 @@ body {
         }
     }
     p {
-        font-family: "JetBrains Mono", Arial;
+        font-family: $font2;
         font-size: 14px;
         margin: 10px 30px 10px 30px;
         color: white;
@@ -358,16 +419,36 @@ body {
     .form-label {
         font-size: 14px;
         color: white;
-        font-family: "JetBrains Mono", Arial;
+        font-family: $font2;
+    }
+    form {
+        font-family: $font2;
+        margin: 0 20px 0 20px;
+        .form-control, .form-select {
+            background-color: $primary;
+            color: white;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                transition: all 0.3s ease;
+                &:focus {
+                background-color: $primary;
+                color: white;
+                border: 1px solid $colorBlue;
+                box-shadow: 0 0 5px $colorBlue;
+            }
+            &::placeholder {
+                color: white !important;
+                opacity: 1;
+            }
+        }
     }
      h4 {
-        font-family: "JetBrains Mono", Arial;
+        font-family: $font2;
         font-size: 14px;
      }
      .acrescimos {
         margin-top: 20px;
         display: block;
-        gap: 40px;
+        gap: 30px;
         input {
             margin-bottom: 10px;
         }
@@ -409,6 +490,25 @@ body {
 
          }
      }
+}
+
+ .footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    color: #A6ACBE;
+    padding: 20px;
+    box-sizing: border-box;
+    background: $primary;
+    .row {
+        h2 {
+            font-family: "Inter", Arial;
+            font-size: 17px;
+            font-weight: 900;
+        }
+        p {
+            font-family: "Inter", Arial;
+            font-size: 14px;
+        }
+    }
 }
 
 
@@ -493,6 +593,7 @@ body {
             color: #A6ACBE;
             margin-left: 135px;
             font-size: 16px;
+            border: 0;
         }
     }
 
@@ -501,6 +602,7 @@ body {
             font-size: 16px;
             color: #A6ACBE;
             font-family: "JetBrains Mono", Arial;
+            border: 0;
         }
         h6 {
             margin-top: 5px;
@@ -586,178 +688,7 @@ body {
             font-size: 70px;
             font-weight: 800;
         }
-        .ser-h2 {
-            font-size: 35px;
-            font-weight: 800;
-            padding: 0 0px 15px 25px;
-            margin: 0;
-        }
-        .descr {
-            font-size: 14px;
-            color: #A6ACBE;
-            font-family: "JetBrains Mono", Arial;
-            margin-bottom: 50px;
-        }
-        p {
-            font-size: 14px;
-            color: #A6ACBE;
-            font-family: "JetBrains Mono", Arial;
-        }
-        h6 {
-            font-family: "JetBrains Mono", Arial;
-            font-size: 12px;
-            color: #A6ACBE;
-            padding: 25px;
-        }
-        .btn-plus {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            background-color: $primary;
-            color: white;
-            font-size: 20px;
-            float: right;
-            cursor: pointer;
-            }
-
-            .btn-plus:hover {
-            background-color: #0c122c;
-        }
-        .row {
-            row-gap: 60px;
-            background-color: $primary;
-            margin: 20px 30px 90px 30px;
-            height: 480px;
-            #coluna1, #coluna2, #coluna3 {
-                border-top: 1px solid rgba(255, 255, 255, 0.10);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-                border-left: 1px solid rgba(255, 255, 255, 0.10);
-                border-right: 1px solid rgba(255, 255, 255, 0.10);
-                border-right: 1px solid rgba(255, 255, 255, 0.10);
-                padding: 10px;
-                h2 {
-                    font-size: 32px;
-                    font-weight: 800;
-                    padding: 0 0px 15px 25px;
-                }
-                .preco {
-                    display: flex;
-                    align-items: baseline;
-                    gap: 4px;
-                    p {
-                        margin: 0;
-                        margin-left: 27px;
-                        font-size: 20px;
-                    }
-                    h3 {
-                        font-size: 30px;
-                        color: blue;
-                        font-family: "Inter", Arial;
-                        font-weight: 800;
-                        margin-left: 30px;
-                        margin: 0;
-                    }
-                }
-                .btn-01 {
-                    font-size: 15px;
-                    margin-top: 24px;
-                    background-color: $primary;
-                    border: 1px solid rgba(255, 255, 255, 0.10);
-                    text-align: center;
-                    margin-left: 50px;
-                    padding: 7px;
-                    width: 60%;
-                    transition: transform 0.3s ease;
-                    border-radius: 0px;
-                    a {
-                        color: white;
-                        text-decoration: none;
-                        font-weight: 800;
-                        font-family: "Inter", Arial;
-                    }
-                }
-                .btn-1 {
-                    font-size: 15px;
-                    margin-top: 15px;
-                    background-color: $primary;
-                    border: 1px solid rgba(255, 255, 255, 0.10);
-                    text-align: center;
-                    margin-left: 50px;
-                    padding: 7px;
-                    width: 60%;
-                    transition: transform 0.3s ease;
-                    border-radius: 0px;
-                    a {
-                        color: white;
-                        text-decoration: none;
-                        font-weight: 800;
-                        font-family: "Inter", Arial;
-                    }
-                }
-            }
-        }
-            #coluna4 {
-                background-color: #1210c0;
-                padding: 10px;
-                .btn-plus {
-                    border: 1px solid rgba(255, 255, 255, 0.10);
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    border: none;
-                    background-color: rgba(58, 58, 224, 0.404);
-                    color: white;
-                    font-size: 20px;
-                    float: right;
-                    cursor: pointer;
-                    }
-
-                    .btn-plus:hover {
-                    background-color: rgba(93, 93, 255, 0.455);
-                }
-                .preco {
-                    display: flex;
-                    align-items: baseline;
-                    gap: 4px;
-                    p {
-                        margin: 0;
-                        margin-left: 27px;
-                        font-size: 20px;
-                    }
-                    h3 {
-                        font-size: 30px;
-                        color: white;
-                        font-family: "Inter", Arial;
-                        font-weight: 800;
-                        margin-left: 30px;
-                        margin: 0;
-                    }
-                }
-                h2 {
-                    font-size: 32px;
-                    font-weight: 800;
-                    padding: 0 0px 15px 25px;
-                }
-                .btn-1 {
-                    font-size: 15px;
-                    border-radius: 0px;
-                    margin-top: 10px;
-                    background-color: $primary;
-                    border: 0;
-                    margin-left: 50px;
-                    padding: 9px;
-                    width: 60%;
-                    transition: transform 0.3s ease;
-                    a {
-                        color: white;
-                        text-decoration: none;
-                        font-weight: 800;
-                        font-family: "Inter", Arial;
-                    }
-                }
-            }
-        }
+    }
 
     .sobre {
         .row {
@@ -786,6 +717,7 @@ body {
         }
         .row {
             .img2 {
+                display: block;
                 width: 100%;
                 margin-top: 200px;
                 box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);

@@ -5,9 +5,12 @@
 
 body {
   background: #060a1e;
-  margin-top: 150px;
   font-family: "Inter", Arial;
   color: white;
+  margin-top: 150px;
+}
+body .span {
+  color: blue;
 }
 
 .navbar-brand {
@@ -15,8 +18,8 @@ body {
   font-size: 24px;
   font-weight: 800;
 }
-.navbar-brand .brito {
-  color: blue;
+.navbar-brand:hover {
+  color: #FFF;
 }
 
 .navbar {
@@ -38,31 +41,17 @@ body {
   background: white;
   border-radius: 0;
 }
-
-.btn {
+.navbar .btn-agendamento {
   background-color: #1210c0;
   transition: all 0.5s;
   padding: 10px;
   color: white;
   font-weight: bold;
-  border-radius: 0;
+  border-radius: 5px;
+  text-decoration: none;
 }
-
-.footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #A6ACBE;
-  padding: 20px;
-  box-sizing: border-box;
-  background: #060a1e;
-}
-.footer .row h2 {
-  font-family: "Inter", Arial;
-  font-size: 17px;
-  font-weight: 900;
-}
-.footer .row p {
-  font-family: "Inter", Arial;
-  font-size: 14px;
+.navbar .btn-agendamento:hover {
+  background-color: #3460e4;
 }
 
 .home .row img {
@@ -72,17 +61,14 @@ body {
   font-family: "JetBrains Mono", Arial;
   font-size: 14px;
   color: blue;
-  margin: 0  30px 0 30px;
+  margin: 0 30px 0 30px;
 }
 .home .row h1 {
   margin-top: 15px;
   font-size: 65px;
   color: white;
   font-weight: 800;
-  margin: 0  30px 0 27px;
-}
-.home .row h1 .brito {
-  color: blue;
+  margin: 0  30px 0 30px;
 }
 .home .row p {
   margin-top: 15px;
@@ -121,87 +107,86 @@ body {
   text-decoration: none;
   color: white;
 }
-
-.servicos h2 {
-  margin: 30px 0px 0 0px;
-  padding: 30px;
+.home .segunda-coluna {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.sobre h4 {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 0 30px 0 30px;
-  padding: 30px 0 0 0;
-}
-.sobre h3 {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 50px 0 0 0;
-}
-
-.contato form {
-  margin: 0 20px 0 20px;
-}
-.contato form input, .contato form textarea {
-  border-radius: 0;
-}
-
-.agendamento form {
-  margin: 0 20px 0 20px;
-}
-.agendamento form input, .agendamento form select, .agendamento form textarea {
-  border-radius: 0;
-}
-
-.coluna2 {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.coluna2 h2 {
+.home .segunda-coluna h2 {
   font-weight: 800;
   color: white;
   font-size: 40px;
   margin: 90px 30px 0 30px;
 }
-.coluna2 h3 {
+.home .segunda-coluna h3 {
   font-family: "Inter", Arial;
   color: blue;
   font-size: 40px;
   margin: 0  30px 0 30px;
 }
-.coluna2 p {
+.home .segunda-coluna p {
   font-family: "JetBrains Mono", Arial;
   color: white;
   font-size: 12px;
   margin: 10px 30px 10px 30px;
 }
-.coluna2 .row {
-  margin: 70px 40px 70px 40px;
+.home #terceira-coluna .row {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 80px 30px 60px 30px;
+  background-color: #060a1e;
 }
-
-.coluna3 .coluna3-h2 {
-  color: white;
+.home #terceira-coluna .row #coluna1, .home #terceira-coluna .row #coluna2, .home #terceira-coluna .row #coluna3 {
+  padding: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-.coluna3 p {
+.home #terceira-coluna .row #coluna1 h2, .home #terceira-coluna .row #coluna2 h2, .home #terceira-coluna .row #coluna3 h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: "Inter", Arial;
+}
+.home #terceira-coluna .row #coluna4 {
+  padding: 10px;
+}
+.home #terceira-coluna .row #coluna4 h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: "Inter", Arial;
+}
+.home #terceira-coluna .row #coluna4 p {
+  border-bottom: 0;
+}
+.home #terceira-coluna p {
+  padding: 0px 0 35px 0px;
+  font-size: 16px;
   color: #A6ACBE;
+  font-family: "JetBrains Mono", Arial;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.coluna4 h2 {
+.home #terceira-coluna h6 {
+  margin-top: 5px;
+  color: #0032c8;
+  font-size: 14px;
+  margin-right: 250px;
+  padding: 10px;
+}
+.home .quarta-coluna h2 {
   font-weight: 800;
   font-size: 37px;
   font-family: "Inter", Arial;
   margin: 150px 0px 0 0px;
 }
-.coluna4 p {
+.home .quarta-coluna p {
   color: blue;
   font-size: 30px;
   margin: 10px 30px 10px 30px;
 }
-.coluna4 .descricao {
+.home .quarta-coluna .descricao {
   color: white;
   font-size: 13px;
 }
-.coluna4 .btn-1 {
+.home .quarta-coluna .btn-1 {
   border: 0;
-  border-radius: 0;
+  border-radius: 5px;
   font-weight: 800;
   margin-top: 15px;
   margin-left: 25px;
@@ -210,13 +195,13 @@ body {
   width: 43%;
   transition: transform 0.3s ease;
 }
-.coluna4 .btn-1 a {
+.home .quarta-coluna .btn-1 a {
   text-decoration: none;
   color: black;
 }
-.coluna4 .btn-2 {
+.home .quarta-coluna .btn-2 {
   border: 0;
-  border-radius: 0;
+  border-radius: 5px;
   font-weight: 800;
   margin-top: 15px;
   background-color: #1b233d;
@@ -225,13 +210,13 @@ body {
   transition: transform 0.3s ease;
   margin-bottom: 100px;
 }
-.coluna4 .btn-2 a {
+.home .quarta-coluna .btn-2 a {
   text-decoration: none;
   color: white;
 }
 
 .servicos h1 {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 800;
   margin: 0px 30px 0 30px;
 }
@@ -241,8 +226,48 @@ body {
   font-family: "JetBrains Mono", Arial;
   margin: 10px 30px 10px 30px;
 }
-.servicos h2 {
-  border: 0;
+.servicos h3 {
+  color: white;
+  font-size: 35px;
+  font-weight: 800;
+  padding: 0 0px 15px 25px;
+  margin: 0;
+}
+.servicos .card {
+  background-color: #060a1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.servicos .row {
+  row-gap: 60px;
+  margin: 20px 30px 90px 30px;
+  height: 480px;
+}
+.servicos .row .preco {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.servicos .row .preco p {
+  margin: 0;
+  margin-left: 27px;
+  font-size: 14px;
+}
+.servicos .row .preco h4 {
+  font-size: 25px;
+  color: blue;
+  font-family: "Inter", Arial;
+  font-weight: 800;
+  margin-left: 30px;
+  margin: 0;
+}
+.servicos .row .duracao {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #A6ACBE;
+  margin-left: 27px;
+}
+.servicos .row .duracao .fa fa-clock {
+  color: #A6ACBE;
 }
 
 .sobre .inicio {
@@ -256,16 +281,24 @@ body {
   font-weight: 800;
   margin: 0 30px 0 30px;
 }
-.sobre h2 span {
-  color: blue;
-}
 .sobre p {
   font-size: 14px;
   font-family: "JetBrains Mono", Arial;
   color: white;
   margin: 10px 30px 10px 30px;
 }
-.sobre .sobre-h2 {
+.sobre .img1, .sobre .img2 {
+  display: none;
+}
+.sobre h4 {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 30px 0 30px;
+  padding: 30px 0 0 0;
+  font-weight: 800;
+}
+.sobre h6 {
+  font-size: 40px;
+  font-weight: 800;
   padding: 100px 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 36px;
@@ -273,6 +306,8 @@ body {
   margin: 80px 30px 0 30px;
 }
 .sobre h3 {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 0 0 0;
   font-size: 36px;
   font-weight: 800;
   margin: 40px 30px 0 30px;
@@ -301,14 +336,41 @@ body {
   font-weight: 800;
   margin: 0 30px 0 30px;
 }
-.contato h2 span {
-  color: blue;
-}
 .contato p {
   font-size: 14px;
   font-family: "JetBrains Mono", Arial;
   color: white;
   margin: 10px 30px 10px 30px;
+}
+.contato form {
+  font-family: "JetBrains Mono", Arial;
+  margin: 0 20px 0 20px;
+}
+.contato form .form-control {
+  background-color: #060a1e;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.contato form .form-control:focus {
+  background-color: #060a1e;
+  color: white;
+  border: 1px solid blue;
+  box-shadow: 0 0 5px blue;
+}
+.contato form .form-control::placeholder {
+  color: white !important;
+  opacity: 1;
+}
+.contato button {
+  background-color: blue;
+  padding: 10px;
+  width: 60%;
+  transition: transform 0.3s ease;
+  margin: 20px 0 70px 0;
+  border-radius: 0px;
+  font-family: "Inter", Arial;
+  font-weight: 800;
 }
 
 .agendamento h2 {
@@ -332,6 +394,26 @@ body {
   color: white;
   font-family: "JetBrains Mono", Arial;
 }
+.agendamento form {
+  font-family: "JetBrains Mono", Arial;
+  margin: 0 20px 0 20px;
+}
+.agendamento form .form-control, .agendamento form .form-select {
+  background-color: #060a1e;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+.agendamento form .form-control:focus, .agendamento form .form-select:focus {
+  background-color: #060a1e;
+  color: white;
+  border: 1px solid blue;
+  box-shadow: 0 0 5px blue;
+}
+.agendamento form .form-control::placeholder, .agendamento form .form-select::placeholder {
+  color: white !important;
+  opacity: 1;
+}
 .agendamento h4 {
   font-family: "JetBrains Mono", Arial;
   font-size: 14px;
@@ -339,7 +421,7 @@ body {
 .agendamento .acrescimos {
   margin-top: 20px;
   display: block;
-  gap: 40px;
+  gap: 30px;
 }
 .agendamento .acrescimos input {
   margin-bottom: 10px;
@@ -377,6 +459,23 @@ body {
   color: white;
   font-weight: bold;
   font-family: "Inter", Arial;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #A6ACBE;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #060a1e;
+}
+.footer .row h2 {
+  font-family: "Inter", Arial;
+  font-size: 17px;
+  font-weight: 900;
+}
+.footer .row p {
+  font-family: "Inter", Arial;
+  font-size: 14px;
 }
 
 @media (min-width: 769px) {
@@ -455,11 +554,13 @@ body {
     color: #A6ACBE;
     margin-left: 135px;
     font-size: 16px;
+    border: 0;
   }
   .home #coluninha p {
     font-size: 16px;
     color: #A6ACBE;
     font-family: "JetBrains Mono", Arial;
+    border: 0;
   }
   .home #coluninha h6 {
     margin-top: 5px;
@@ -539,175 +640,6 @@ body {
     font-size: 70px;
     font-weight: 800;
   }
-  .servicos .ser-h2 {
-    font-size: 35px;
-    font-weight: 800;
-    padding: 0 0px 15px 25px;
-    margin: 0;
-  }
-  .servicos .descr {
-    font-size: 14px;
-    color: #A6ACBE;
-    font-family: "JetBrains Mono", Arial;
-    margin-bottom: 50px;
-  }
-  .servicos p {
-    font-size: 14px;
-    color: #A6ACBE;
-    font-family: "JetBrains Mono", Arial;
-  }
-  .servicos h6 {
-    font-family: "JetBrains Mono", Arial;
-    font-size: 12px;
-    color: #A6ACBE;
-    padding: 25px;
-  }
-  .servicos .btn-plus {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #060a1e;
-    color: white;
-    font-size: 20px;
-    float: right;
-    cursor: pointer;
-  }
-  .servicos .btn-plus:hover {
-    background-color: #0c122c;
-  }
-  .servicos .row {
-    row-gap: 60px;
-    background-color: #060a1e;
-    margin: 20px 30px 90px 30px;
-    height: 480px;
-  }
-  .servicos .row #coluna1, .servicos .row #coluna2, .servicos .row #coluna3 {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px;
-  }
-  .servicos .row #coluna1 h2, .servicos .row #coluna2 h2, .servicos .row #coluna3 h2 {
-    font-size: 32px;
-    font-weight: 800;
-    padding: 0 0px 15px 25px;
-  }
-  .servicos .row #coluna1 .preco, .servicos .row #coluna2 .preco, .servicos .row #coluna3 .preco {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-  }
-  .servicos .row #coluna1 .preco p, .servicos .row #coluna2 .preco p, .servicos .row #coluna3 .preco p {
-    margin: 0;
-    margin-left: 27px;
-    font-size: 20px;
-  }
-  .servicos .row #coluna1 .preco h3, .servicos .row #coluna2 .preco h3, .servicos .row #coluna3 .preco h3 {
-    font-size: 30px;
-    color: blue;
-    font-family: "Inter", Arial;
-    font-weight: 800;
-    margin-left: 30px;
-    margin: 0;
-  }
-  .servicos .row #coluna1 .btn-01, .servicos .row #coluna2 .btn-01, .servicos .row #coluna3 .btn-01 {
-    font-size: 15px;
-    margin-top: 24px;
-    background-color: #060a1e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    margin-left: 50px;
-    padding: 7px;
-    width: 60%;
-    transition: transform 0.3s ease;
-    border-radius: 0px;
-  }
-  .servicos .row #coluna1 .btn-01 a, .servicos .row #coluna2 .btn-01 a, .servicos .row #coluna3 .btn-01 a {
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-    font-family: "Inter", Arial;
-  }
-  .servicos .row #coluna1 .btn-1, .servicos .row #coluna2 .btn-1, .servicos .row #coluna3 .btn-1 {
-    font-size: 15px;
-    margin-top: 15px;
-    background-color: #060a1e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    margin-left: 50px;
-    padding: 7px;
-    width: 60%;
-    transition: transform 0.3s ease;
-    border-radius: 0px;
-  }
-  .servicos .row #coluna1 .btn-1 a, .servicos .row #coluna2 .btn-1 a, .servicos .row #coluna3 .btn-1 a {
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-    font-family: "Inter", Arial;
-  }
-  .servicos #coluna4 {
-    background-color: #1210c0;
-    padding: 10px;
-  }
-  .servicos #coluna4 .btn-plus {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: rgba(58, 58, 224, 0.404);
-    color: white;
-    font-size: 20px;
-    float: right;
-    cursor: pointer;
-  }
-  .servicos #coluna4 .btn-plus:hover {
-    background-color: rgba(93, 93, 255, 0.455);
-  }
-  .servicos #coluna4 .preco {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-  }
-  .servicos #coluna4 .preco p {
-    margin: 0;
-    margin-left: 27px;
-    font-size: 20px;
-  }
-  .servicos #coluna4 .preco h3 {
-    font-size: 30px;
-    color: white;
-    font-family: "Inter", Arial;
-    font-weight: 800;
-    margin-left: 30px;
-    margin: 0;
-  }
-  .servicos #coluna4 h2 {
-    font-size: 32px;
-    font-weight: 800;
-    padding: 0 0px 15px 25px;
-  }
-  .servicos #coluna4 .btn-1 {
-    font-size: 15px;
-    border-radius: 0px;
-    margin-top: 10px;
-    background-color: #060a1e;
-    border: 0;
-    margin-left: 50px;
-    padding: 9px;
-    width: 60%;
-    transition: transform 0.3s ease;
-  }
-  .servicos #coluna4 .btn-1 a {
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-    font-family: "Inter", Arial;
-  }
 
   .sobre .row .img1 {
     display: block;
@@ -732,6 +664,7 @@ body {
     font-family: "JetBrains Mono", Arial;
   }
   .sobre .row .img2 {
+    display: block;
     width: 100%;
     margin-top: 200px;
     box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
