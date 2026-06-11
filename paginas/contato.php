@@ -28,7 +28,7 @@
                     style="height: 100px" required></textarea>
             </div>
             <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary">Enviar via WhatsApp</button>
+                <button type="submit" class="btn btn-primary">ENVIAR VIA WHATSAPP</button>
             </div>
         </form>
     </div>

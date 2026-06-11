@@ -39,7 +39,7 @@ body .span {
 }
 .navbar .navbar-toggler {
   background: white;
-  border-radius: 0;
+  border-radius: 5px;
 }
 .navbar .btn-agendamento {
   background-color: #1210c0;
@@ -85,7 +85,7 @@ body .span {
   background-color: white;
   padding: 7px;
   width: 43%;
-  border-radius: 0;
+  border-radius: 5px;
   transition: transform 0.3s ease;
 }
 .home .row .btn-1 a {
@@ -101,7 +101,7 @@ body .span {
   width: 43%;
   transition: transform 0.3s ease;
   margin-bottom: 100px;
-  border-radius: 0;
+  border-radius: 5px;
 }
 .home .row .btn-2 a {
   text-decoration: none;
@@ -160,7 +160,6 @@ body .span {
   font-size: 16px;
   color: #A6ACBE;
   font-family: "JetBrains Mono", Arial;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .home #terceira-coluna h6 {
   margin-top: 5px;
@@ -269,6 +268,13 @@ body .span {
 .servicos .row .duracao .fa fa-clock {
   color: #A6ACBE;
 }
+.servicos .row button {
+  font-weight: 800;
+}
+.servicos .row button a {
+  color: white;
+  text-decoration: none;
+}
 
 .sobre .inicio {
   font-size: 14px;
@@ -368,7 +374,7 @@ body .span {
   width: 60%;
   transition: transform 0.3s ease;
   margin: 20px 0 70px 0;
-  border-radius: 0px;
+  border-radius: 5pxpx;
   font-family: "Inter", Arial;
   font-weight: 800;
 }
@@ -449,7 +455,7 @@ body .span {
   margin: 13px 0px 35px 0px;
 }
 .agendamento #btn-ag button {
-  border-radius: 0;
+  border-radius: 5px;
   background-color: blue;
   padding: 2px;
   width: 60%;
@@ -467,6 +473,10 @@ body .span {
   padding: 20px;
   box-sizing: border-box;
   background: #060a1e;
+}
+.footer .row {
+  display: block;
+  margin-bottom: 20px;
 }
 .footer .row h2 {
   font-family: "Inter", Arial;
@@ -500,6 +510,7 @@ body .span {
   }
 
   .home .row img {
+    border-radius: 10px;
     display: block;
     box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
   }
@@ -518,7 +529,7 @@ body .span {
     padding: 7px;
     width: 25%;
     transition: transform 0.3s ease;
-    border-radius: 0px;
+    border-radius: 5px;
   }
   .home .row .btn-1 a {
     text-decoration: none;
@@ -530,7 +541,7 @@ body .span {
     width: 26%;
     transition: transform 0.3s ease;
     margin-bottom: 100px;
-    border-radius: 0px;
+    border-radius: 5px;
   }
   .home .row .btn-2 a {
     text-decoration: none;
@@ -642,6 +653,7 @@ body .span {
   }
 
   .sobre .row .img1 {
+    border-radius: 10px;
     display: block;
     margin-top: 125px;
     width: 100%;
@@ -664,6 +676,7 @@ body .span {
     font-family: "JetBrains Mono", Arial;
   }
   .sobre .row .img2 {
+    border-radius: 10px;
     display: block;
     width: 100%;
     margin-top: 200px;
@@ -724,7 +737,7 @@ body .span {
     width: 20%;
     transition: transform 0.3s ease;
     margin-bottom: 90px;
-    border-radius: 0px;
+    border-radius: 5px;
   }
   .sobre .row3 .button1 a {
     text-decoration: none;
@@ -779,7 +792,7 @@ body .span {
     width: 30%;
     transition: transform 0.3s ease;
     margin: 20px 0 20px 0;
-    border-radius: 0px;
+    border-radius: 5px;
   }
 
   .agendamento h2 {
@@ -836,7 +849,7 @@ body .span {
   }
   .agendamento #confirmacao button {
     margin-left: 12px;
-    border-radius: 0;
+    border-radius: 5px;
   }
   .agendamento #confirmacao #detalhes {
     font-family: "JetBrains Mono", Arial;
@@ -850,7 +863,7 @@ body .span {
     margin-bottom: 0px;
   }
   .agendamento #btn-ag button {
-    border-radius: 0;
+    border-radius: 5px;
     background-color: blue;
     padding: 10px;
     width: 30%;
@@ -859,10 +872,17 @@ body .span {
   }
 
   .footer {
-    padding: 20px 20px 0 20px;
+    padding: 30px 20px 0 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #A6ACBE;
     font-family: "Inter", Arial;
+  }
+  .footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0px;
   }
   .footer .row h2 {
     font-size: 17px;

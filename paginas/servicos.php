@@ -8,7 +8,6 @@
 
         <div class="row">
             <?php
-            // Ajuste os nomes das colunas conforme estão no seu banco
             $sqlServicos = "SELECT nome_servico, preco, descricao, duracao_horas 
                             FROM servicos 
                             WHERE tipo_servico = 'principal' 
@@ -40,7 +39,9 @@
                         }
                         ?>
                         <h6 class="duracao"><i class="fa fa-clock"></i> <?= $duracaoFormatada ?></h6>
-                        <button class="btn btn-outline-primary mt-3">AGENDAR AGORA</button>
+                        <button class="btn btn-outline-primary mt-3">
+                            <a href="agendamento">AGENDAR AGORA</a>
+                        </button>
                     </div>
                 </div>
                 <?php

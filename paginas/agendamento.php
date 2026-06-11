@@ -1,54 +1,9 @@
-<?php
-include 'config.php';
-
-if ($conn->connect_error) {
-    die("Erro na conexão: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome     = $_POST["nome"];
-    $telefone = $_POST["telefone"];
-    $placa    = $_POST["placa"];
-    $veiculo  = $_POST["veiculo"];
-    $data     = $_POST["data"];
-    $horario  = $_POST["horario"];
-    $servico  = $_POST["servico"];
-    $extras   = isset($_POST["extras"]) ? $_POST["extras"] : [];
-
-    $sql_cliente = "INSERT INTO clientes (nome, telefone) VALUES ('$nome', '$telefone')";
-    if ($conn->query($sql_cliente) === TRUE) {
-        $id_cliente = $conn->insert_id;
-
-        $data_hora = $data . " " . $horario;
-        $sql_agendamento = "INSERT INTO agendamentos (id_cliente, data_hora, placa_veiculo, modelo_veiculo)
-                            VALUES ('$id_cliente', '$data_hora', '$placa', '$veiculo')";
-        if ($conn->query($sql_agendamento) === TRUE) {
-            $id_agendamento = $conn->insert_id;
-
-            $conn->query("INSERT INTO agendamento_servico (id_agendamento, id_servico)
-                          VALUES ('$id_agendamento', '$servico')");
-
-            foreach ($extras as $id_servico_extra) {
-                $conn->query("INSERT INTO agendamento_servico (id_agendamento, id_servico)
-                              VALUES ('$id_agendamento', '$id_servico_extra')");
-            }
-
-            echo "<p style='color:green'>Agendamento salvo com sucesso!</p>";
-        } else {
-            echo "Erro ao salvar agendamento: " . $conn->error;
-        }
-    } else {
-        echo "Erro ao salvar cliente: " . $conn->error;
-    }
-}
-?>
-
 <div class="container">
-<div class="agendamento">
+  <div class="agendamento">
     <h2>REALIZE SEU <br><span>AGENDAMENTO ONLINE</span></h2>
     <p>Agende um horário para cuidar do seu carro.</p>
 
-    <form id="formAgendamento" class="row g-3" action="agendamento.php" method="post">
+    <form id="formAgendamento" class="row g-3" action="paginas/salvar_agendamento.php" method="POST">
       <div class="col-md-6">
         <label for="nome" class="form-label">Nome Completo</label>
         <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required>
@@ -63,21 +18,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
       <div class="col-md-6">
         <label for="veiculo" class="form-label">Veículo</label>
-        <input type="text" class="form-control" id="veiculo" name="veiculo" placeholder="Ex: Corolla Cinza 2022" required>
+        <input type="text" class="form-control" id="veiculo" name="veiculo" placeholder="Ex: Corolla Cinza 2022"
+          required>
       </div>
       <div class="col-md-12">
         <label for="servico" class="form-label">Selecione um serviço</label>
         <select id="servico" name="servico" class="form-select" required>
-          <option value="">Selecione um serviço</option>
-          <option value="1">Lavagem Detalhada - R$ 80 - 150</option>
-          <option value="2">Higienização Interna Completa - R$ 600 - 1200</option>
-          <option value="3">Restauração de Faróis - R$ 120 - 250</option>
-          <option value="4">Polimento Comercial - R$ 350 - 700</option>
-          <option value="5">Limpeza de Motor - R$ 180 - 400</option>
-          <option value="6">Polimento Técnico + Vitrificação - R$ 1200 - 3000</option>
-          <option value="7">Vitrificação de Plástico - R$ 450 - 900</option>
-          <option value="8">Limpeza de Chassi - R$ 200 - 500</option>
-          <option value="9">Higienização dos Bancos - R$ 350 - 800</option>
+          <option value="" data-preco="0">Selecione um serviço</option>
+          <option value="1" data-preco="150">Lavagem Detalhada - R$ 150</option>
+          <option value="2" data-preco="1200">Higienização Interna Completa - R$ 1200</option>
+          <option value="3" data-preco="250">Restauração de Faróis - R$ 250</option>
+          <option value="4" data-preco="700">Polimento Comercial - R$ 700</option>
+          <option value="5" data-preco="400">Limpeza de Motor - R$ 400</option>
+          <option value="6" data-preco="2500">Polimento Técnico + Vitrificação - R$ 2500</option>
+          <option value="7" data-preco="700">Vitrificação de Plástico - R$ 700</option>
+          <option value="8" data-preco="500">Limpeza de Chassi - R$ 500</option>
+          <option value="9" data-preco="800">Higienização dos Bancos - R$ 800</option>
         </select>
       </div>
       <div class="col-md-6">
@@ -114,16 +70,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="col-12">
         <h4>Acréscimos Opcionais</h4>
         <div class="acrescimos">
-          <input type="checkbox" name="extras[]" value="10"> Polimento Técnico <br><br>
-          <input type="checkbox" name="extras[]" value="11"> Hidratação de Couro <br><br>
-          <input type="checkbox" name="extras[]" value="12"> Cristalização de Vidros <br><br>
-          <input type="checkbox" name="extras[]" value="13"> Limpeza do Motor <br><br>
-          <input type="checkbox" name="extras[]" value="14"> Cera Líquida <br><br>
+          <input type="checkbox" name="extras[]" value="10" data-preco="200"> Polimento Técnico <br><br>
+          <input type="checkbox" name="extras[]" value="11" data-preco="200"> Hidratação de Couro <br><br>
+          <input type="checkbox" name="extras[]" value="12" data-preco="200"> Cristalização de Vidros <br><br>
+          <input type="checkbox" name="extras[]" value="13" data-preco="400"> Limpeza do Motor <br><br>
+          <input type="checkbox" name="extras[]" value="14" data-preco="80"> Cera Líquida <br><br>
         </div>
       </div>
 
       <div class="col-12">
-        <p id="total">TOTAL ESTIMADO: R$ 0</p>
+        <p id="total" class="text-primary mt-3">TOTAL ESTIMADO: R$ 0</p>
       </div>
 
       <div id="btn-ag" class="col-12 text-center">
@@ -131,53 +87,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </form>
 
-    <div id="confirmacao" class="mt-4 text-success text-center" style="display:none;">
-      <h3>AGENDAMENTO CONFIRMADO!</h3>
-      <p id="detalhes" class="text-center"></p>
-      <button onclick="abrirWhatsapp()" class="btn btn-success">FALAR NO WHATSAPP</button>
-      <button onclick="location.reload()" class="btn btn-secondary">NOVO AGENDAMENTO</button>
-    </div>
-  </div>
-
+    <script src="https://unpkg.com/imask"></script>
     <script>
-    const form = document.getElementById("formAgendamento");
-    const total = document.getElementById("total");
-    const confirmacao = document.getElementById("confirmacao");
-    const detalhes = document.getElementById("detalhes");
-
-    function PrecoServico() {
-      return parseInt(document.getElementById("servico").value) || 0;
-    }
-
-    form.addEventListener("change", () => {
-      let soma = PrecoServico();
-      const checkboxes = form.querySelectorAll("input[type=checkbox]");
-
-      checkboxes.forEach(cb => {
-        if (cb.checked) soma += parseInt(cb.value);
+      // 1. Aplica a máscara no campo de Telefone/WhatsApp
+      const campoTelefone = document.getElementById('telefone');
+      const mascaraTelefone = IMask(campoTelefone, {
+        mask: '(00) 00000-0000'
       });
 
-      total.textContent = "TOTAL ESTIMADO: R$ " + soma;
-    });
+      // 2. Aplica a máscara inteligente na Placa (Padrão Antigo e Mercosul)
+      const campoPlaca = document.getElementById('placa');
+      const mascaraPlaca = IMask(campoPlaca, {
+        mask: 'aaa-0[a0]00', // Aceita letra ou número no 5º caractere
+        prepare: function (str) {
+          return str.toUpperCase(); // Força todas as letras a ficarem maiúsculas
+        }
+      });
+    </script>
+    <script>
+      const selectServico = document.getElementById('servico');
+      const checkboxesExtras = document.querySelectorAll('input[name="extras[]"]');
+      const textoTotal = document.getElementById('total');
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      confirmacao.style.display = "block";
+      function calcularTotal() {
+        let total = 0;
 
-    const nome = document.getElementById("nome").value;
-    const data = document.getElementById("data").value;
-    const horario = document.getElementById("horario").value;
+        // 1. Pega o preço do serviço selecionado
+        const opcaoSelecionada = selectServico.options[selectServico.selectedIndex];
+        const precoServico = parseFloat(opcaoSelecionada.getAttribute('data-preco')) || 0;
+        total += precoServico;
 
-      detalhes.textContent = "Obrigado, " + nome +
-        ". Seu agendamento foi reservado para " +
-        data + " às " + horario + ".";
-      
-      form.style.display = "none";
-      
-    });
+        // 2. Soma o preço dos extras marcados
+        checkboxesExtras.forEach(checkbox => {
+          if (checkbox.checked) {
+            const precoExtra = parseFloat(checkbox.getAttribute('data-preco')) || 0;
+            total += precoExtra;
+          }
+        });
 
-    function abrirWhatsapp() {
-      window.open("https://wa.me/5511981392929", "_blank");
-    }
-  </script>
+        // 3. Atualiza o texto na tela formatado como moeda real
+        textoTotal.innerHTML = `TOTAL ESTIMADO: R$ ${total.toFixed(2).replace('.', ',')}`;
+      }
+
+      // Escuta as mudanças no select e nos checkboxes
+      selectServico.addEventListener('change', calcularTotal);
+      checkboxesExtras.forEach(checkbox => {
+        checkbox.addEventListener('change', calcularTotal);
+      });
+    </script>
+  </div>
 </div>
