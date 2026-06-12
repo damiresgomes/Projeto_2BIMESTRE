@@ -81,9 +81,8 @@ body {
         }
         p {
             margin-top: 15px;
-            font-family: $font2;
-            font-size: 13px;
-            color: white;
+            font-size: 15px;
+            color: #A6ACBE;
             margin: 10px 30px 10px 30px;
         }
         .btn-1 {
@@ -91,14 +90,14 @@ body {
             font-weight: 800;
             margin-top: 15px;
             margin-left: 25px;
-            background-color: white;
+            background-color: $colorBlue;
             padding: 7px;
             width: 43%;
             border-radius: 5px;
             transition: transform 0.3s ease;
             a {
                 text-decoration: none;
-                color: black;
+                color: white;
             }
         }
         .btn-2 {
@@ -106,7 +105,7 @@ body {
             font-weight: 800;
             margin-top: 15px;
             background-color: #1b233d;
-            padding: 8px;
+            padding: 10px;
             width: 43%;
             transition: transform 0.3s ease;
             margin-bottom: 100px;
@@ -132,9 +131,8 @@ body {
             margin: 0  30px 0 30px;
         }
         p {
-            font-family: $font2;
-            color: white;
-            font-size: 12px;
+            color: #A6ACBE;
+            font-size: 15px;
             margin: 10px 30px 10px 30px;
 
         }
@@ -170,9 +168,8 @@ body {
         }
         p {
             padding: 0px 0 35px 0px;
-            font-size: 16px;
+            font-size: 15px;
             color: #A6ACBE;
-            font-family: $font2;
         }
         h6 {
             margin-top: 5px;
@@ -192,13 +189,14 @@ body {
             margin: 150px 0px 0 0px;
         }
         p {
+            font-family: $font1;
             color: $colorBlue;
             font-size: 30px;
             margin: 10px 30px 10px 30px;
         }
         .descricao {
-            color: white;
-            font-size: 13px;
+            color: #A6ACBE;
+            font-size: 15px;
         }
         .btn-1 {
             border: 0;
@@ -206,13 +204,13 @@ body {
             font-weight: 800;
             margin-top: 15px;
             margin-left: 25px;
-            background-color: white;
+            background-color: $colorBlue;
             padding: 7px;
             width: 43%;
             transition: transform 0.3s ease;
             a {
                 text-decoration: none;
-                color: black;
+                color: white;
             }
         }
         .btn-2 {
@@ -240,9 +238,8 @@ body {
         margin: 0px 30px 0 30px;
     }
     p {
-        font-size: 14px;
+        font-size: 15px;
         color: #A6ACBE;
-        font-family: $font2;
         margin: 10px 30px 10px 30px;
     }
     h3 {
@@ -255,6 +252,7 @@ body {
     .card {
         background-color: $primary;
         border: 1px solid rgba(255, 255, 255, 0.10);
+        
     }
     .row {
         row-gap: 60px;
@@ -288,6 +286,8 @@ body {
                 }
             }
             button {
+                padding: 7px;
+                background-color: $colorBlue;
                 font-weight: 800;
                 a {
                     color: white;
@@ -300,7 +300,6 @@ body {
 .sobre {
     .inicio{
         font-size: 14px;
-        font-family: $font2;
         color: $colorBlue;
         margin: 0px 30px 10px 30px;
     }
@@ -311,8 +310,7 @@ body {
     }
      p {
         font-size: 14px;
-        font-family: $font2;
-        color: white;
+        color: #A6ACBE;
         margin: 10px 30px 10px 30px;
     }
     .img1, .img2 {
@@ -342,7 +340,7 @@ body {
         margin: 40px 30px 0 30px;
     }
     .button1 {
-        border-radius: 0;
+        border-radius: 5px;
         border: 0;
         font-weight: 800;
         margin-top: 15px;
@@ -369,12 +367,10 @@ body {
     }
     p {
         font-size: 14px;
-        font-family: $font2;
-        color: white;
+        color: #A6ACBE;
         margin: 10px 30px 10px 30px;
     }
     form {
-        font-family: $font2;
         margin: 0 20px 0 20px;
         .form-control {
             background-color: $primary;
@@ -395,11 +391,11 @@ body {
     }
     button {
         background-color: $colorBlue;
-        padding: 10px;  
-        width: 60%;
+        padding: 7px;  
+        width: 70%;
         transition: transform 0.3s ease;
         margin: 20px 0 70px 0;
-        border-radius: 5pxpx;
+        border-radius: 5px;
         font-family: $font1;
         font-weight: 800;
     }
@@ -414,72 +410,101 @@ body {
         font-weight: 800;
         margin: 0 30px 0 30px;
         span {
-            color: blue;
+            color: $colorBlue;
         }
     }
     p {
-        font-family: $font2;
-        font-size: 14px;
+        font-size: 15px;
         margin: 10px 30px 10px 30px;
-        color: white;
+        color: #A6ACBE;
     }
-    .form-label {
-        font-size: 14px;
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-opcao {
+        display: block;
+        cursor: pointer;
+        margin: 0;
+    }
+    .checkbox-servico-extra {
+        display: none !important;
+    }
+    .titulo-secao {
         color: white;
-        font-family: $font2;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    .card-conteudo {
+        background-color: $primary;
+        border: 1px solid #0f1c30;
+        padding: 18px 20px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.25s ease-in-out;
+    }
+    .nome-servico {
+        color: #8492a6;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.25s ease;
+    }
+    .preco-servico {
+        color: #1e70e6;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    .checkbox-servico-extra:checked + .card-conteudo {
+        border-color: #1e70e6;
+        background-color: #051329;
+        box-shadow: 0 0 8px rgba(30, 112, 230, 0.2);
+    }
+    .checkbox-servico-extra:checked + .card-conteudo .nome-servico {
+        color: #ffffff;
+    }
+    .card-opcao:hover .card-conteudo {
+        border-color: #162a4a;
     }
     form {
-        font-family: $font2;
-        margin: 0 20px 0 20px;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        border-radius: 5px;
+        margin: 0 20px 80px 20px;
+        .form-label {
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        font-size: 13px;
+        color: white;
+        }
         .form-control, .form-select {
             background-color: $primary;
-            color: white;
-                border: 1px solid rgba(255, 255, 255, 0.10);
-                transition: all 0.3s ease;
-                &:focus {
-                background-color: $primary;
-                color: white;
-                border: 1px solid $colorBlue;
-                box-shadow: 0 0 5px $colorBlue;
+            color: #8492a6;;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            transition: all 0.3s ease;
+            &:focus {
+            background-color: $primary;
+            color: #8492a6;
+            border: 1px solid $colorBlue;
+            box-shadow: 0 0 5px $colorBlue;
             }
             &::placeholder {
-                color: white !important;
+                color: #8492a6 !important;
                 opacity: 1;
             }
         }
     }
-     h4 {
-        font-family: $font2;
-        font-size: 14px;
-     }
-     .acrescimos {
-        margin-top: 20px;
-        display: block;
-        gap: 30px;
-        input {
-            margin-bottom: 10px;
-        }
-     }
      h3 {
         font-size: 30px;
         color: white;
         font-weight: 800;
         text-align: center;
      }
-     #confirmacao {
-        border: 1px solid rgba(255, 255, 255, 0.10);
-        margin-bottom: 80px;
-        margin-top: 20px;
-        padding: 35px;
-        box-shadow: 5px 5px 30px;
-        button {
-            border-radius: 0;
-            margin-top: 20px;
-            padding: 8px;
-        }
-     }
      #total {
-        color: #A6ACBE;
         margin: 13px 0px 35px 0px;
      }
      #btn-ag {
@@ -487,13 +512,13 @@ body {
             border-radius: 5px;
             background-color: blue;
             padding: 2px;
-            width: 60%;
+            width: 50%;
             transition: transform 0.3s ease;
-            margin: -20px 0 70px 0;
+            margin: -20px 0 30px 0;
             border: none;
             color: white;
             font-weight: bold;
-            font-family: "Inter", Arial;
+            font-family: $font1;
 
          }
      }
@@ -510,12 +535,12 @@ body {
         margin-bottom: 20px;
         h2 {
             font-family: "Inter", Arial;
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 900;
         }
         p {
             font-family: "Inter", Arial;
-            font-size: 14px;
+            font-size: 13px;
         }
     }
 }
@@ -523,13 +548,6 @@ body {
 @media (min-width: 769px ) {
     body {
         margin-top: 140px;
-    }
-
-    .btn {
-        background-color: #1210c0;
-        transition: all 0.5s;
-        padding: 12px;
-        color: rgb(255, 255, 255);
     }
 
     .navbar{
@@ -545,21 +563,18 @@ body {
 
     .home {
         .row {
+            h1 {
+                font-size: 85px;
+            }
+            p {
+                font-size: 16px;
+                color: #A6ACBE;
+            }
             img {
                 border-radius: 10px;
                 display: block;
                 box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
                 
-            }
-            h1 {
-                font-size: 85px;
-                color: white;
-                font-weight: 800;
-            }
-            p {
-                font-family: $font2;
-                font-size: 18px;
-                color: #A6ACBE;
             }
             .btn-1 {
                 background-color: $colorBlue;
@@ -585,122 +600,92 @@ body {
                 }
             }
         }
-    .coluna2 {
+    .segunda-coluna {
         border-top: 1px solid rgba(255, 255, 255, 0.10);
         h2 {
             margin-top: 90px;
-            margin-left: 135px;
             font-size: 45px;
         }
         h3 {
             color: $colorBlue;
             font-size: 45px;
             font-family: $font1;
-            margin-left: 135px;
         }
         p {
             color: #A6ACBE;
-            margin-left: 135px;
             font-size: 16px;
             border: 0;
         }
     }
 
-    #coluninha {
-        p {
-            font-size: 16px;
-            color: #A6ACBE;
-            font-family: "JetBrains Mono", Arial;
-            border: 0;
-        }
-        h6 {
-            margin-top: 5px;
-            color: #0032c8;
-            font-size: 14px;
-            margin-right: 250px;
-            padding: 10px;
-        }
-        .row {
-            border-top: 1px solid rgba(255, 255, 255, 0.10);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-            border-left: 1px solid rgba(255, 255, 255, 0.10);
-            border-right: 1px solid rgba(255, 255, 255, 0.10);
-            margin: 80px 100px 60px 100px;
-            background-color: $primary;
-            height: 300px;
-            #coluna1, #coluna2, #coluna3 {
-                padding: 10px;
-                border-right: 1px solid rgba(255, 255, 255, 0.10);
-                h2 {
-                    margin-top: 20px;
-                    font-size: 25px;
-                    font-weight: 800;
-                    padding: 0 0px 15px 25px;
-                    font-family: "Inter", Arial;
-                }
-            }
-            #coluna4 {
-                padding: 10px;
-                h2 {
-                    margin-top: 20px;
-                    font-size: 25px;
-                    font-weight: 800;
-                    padding: 0 0px 15px 25px;
-                    font-family: "Inter", Arial;
-                }
-            }
-        }
-    }
-
-    .coluna4 {
+    .quarta-coluna{
         h2 {
-            font-weight: 800;
             font-size: 45px;
-            font-family: "Inter", Arial;
         }
         p {
-            color: blue;
             font-size: 42px;
-            font-family: "Inter", Arial;
-        }
-        .descricao {
-            color: #A6ACBE;
-            font-size: 16px;
         }
         .btn-1 {
-            margin-left: 500px;
-            background-color: blue;
-            padding: 10px;
+            margin-left: 385px;
+            padding: 7px;
             width: 20%;
             transition: transform 0.3s ease;
-            a {
-                text-decoration: none;
-                color: white;
-            }
         }
         .btn-2 {
-            background-color: #1b233d;
-            padding: 12px;
+            padding: 9px;
             width: 20%;
             transition: transform 0.3s ease;
             margin-bottom: 90px;
-            a {
-                text-decoration: none;
-                color: white;
-            }
         }
     }
 }
 
-    .servicos {
-        h1 {
-            font-size: 70px;
-            font-weight: 800;
-        }
+.servicos {
+    h1 {
+        font-size: 70px;
+        font-weight: 800;
     }
+    .card {
+    background-color: $primary;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    transition: all 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 10px 20px rgba(79, 94, 142, 0.447) !important;
+        border: 1px solid blue;
+    }
+    .card button {
+        margin-left: 50px;
+        margin-top: auto !important;
+        width: 70% !important;
+        padding: 7px !important;
+        background-color: #0000ff !important;
+        border: none !important;
+    }
+    .card button a {
+        text-decoration: none !important;
+        font-weight: bold;
+    }
+}
 
     .sobre {
         .row {
+            .inicio {
+                color: $colorBlue;
+                font-family: $font2;
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 70px;
+                font-weight: 800;
+                span {
+                    color: $colorBlue;
+                }
+            }
+            p {
+                font-size: 15px;
+            }
             .img1 {
                 border-radius: 10px;
                 display: block;
@@ -708,29 +693,15 @@ body {
                 width: 100%;
                 box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
             }
-            .inicio {
-                color: blue;
-                font-family: "JetBrains Mono", Arial;
-                font-size: 14px;
-            }
-            h2 {
-                font-size: 70px;
-                font-weight: 800;
-                span {
-                    color: blue;
-                }
-            }
-            p {
-                font-size: 16px;
-                font-family: "JetBrains Mono", Arial;
-            }
+            
         }
         .row {
             .img2 {
                 border-radius: 10px;
                 display: block;
                 width: 100%;
-                margin-top: 200px;
+                height: 650px;
+                margin-top: 155px;
                 box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
             }
             .h6 {
@@ -741,14 +712,13 @@ body {
                 margin-top: 90px;
                 font-size: 50px;
                 span {
-                    color: blue;
+                    color: $colorBlue;
                 }
             }
-
             .h4 {
                 border: 0;
                 font-size: 22px;
-                font-family: "Inter", Arial;
+                font-family: $font1;
                 font-weight: 800;
                 color: white;
                 margin: 50px 30px 5px 30px;
@@ -757,14 +727,13 @@ body {
             h4 {
                 border: 0;
                 font-size: 22px;
-                font-family: "Inter", Arial;
+                font-family: $font1;
                 font-weight: 800;
                 color: white;
                 margin: 5px 30px 5px 30px;
             }
             p {
-                font-size: 14px;
-                font-family: "JetBrains Mono", Arial;
+                font-size: 15px;
                 color: #A6ACBE;
                 margin: 5px 30px 5px 30px;
             }
@@ -778,13 +747,12 @@ body {
                 font-weight: 800;
             }
             p {
-                font-size: 16px;
-                font-family: "JetBrains Mono", Arial;
+                font-size: 15px;
                 color: #A6ACBE;
                 margin: 10px 30px 10px 30px;
             }
             .button1 {
-                background-color: blue;
+                background-color: $colorBlue;
                 border: 0;
                 text-align: center;
                 margin-left: 530px;
@@ -797,7 +765,7 @@ body {
                     text-decoration: none;
                     color: white;
                     font-weight: 800;
-                    font-family: "Inter", Arial;
+                    font-family: $font1;
                 }
             }
         }
@@ -805,122 +773,90 @@ body {
 
     .contato {
         h2 {
-            font-size: 60px;
+            font-size: 68px;
             font-weight: 800;
             span {
-                color: blue;
+                color: $colorBlue;
             }
         }
         p {
-            font-size: 16px;
-            font-family: "JetBrains Mono", Arial;
+            font-size: 15px;
         }
         form{
-            border-top: 1px solid rgba(255, 255, 255, 0.10);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-            border-left: 1px solid rgba(255, 255, 255, 0.10);
-            border-right: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
             padding: 30px;
             margin: 20px 30px 90px 30px;
-        }
-        .form-label {
-            font-size: 16px;
-            color: white;
-            font-family: "JetBrains Mono", Arial;
-        }
-        .form-control {
-            background-color: $primary;
-            color: white;
-             border: 1px solid rgba(255, 255, 255, 0.10);
-             transition: all 0.3s ease;
-             &:focus {
+            .form-label {
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                font-family: $font2;
+                color:white;
+            }
+            .form-control {
                 background-color: $primary;
-                color: white;
-                border: 1px solid blue;
-                box-shadow: 0 0 5px blue;
+                color: #8492a6;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                transition: all 0.3s ease;
+                &:focus {
+                    background-color: $primary;
+                    color: #8492a6;
+                    border: 1px solid $colorBlue;
+                    box-shadow: 0 0 5px $colorBlue;
+                }
+                &::placeholder {
+                    color: #8492a6 !important;
+                    opacity: 1;
+                }
             }
-            &::placeholder {
-                color: white !important;
-                opacity: 1;
+            button {
+                border: 0;
+                background-color: $colorBlue;
+                padding: 10px;
+                width: 30%;
+                transition: transform 0.3s ease;
+                margin: 20px 0 20px 0;
+                border-radius: 5px;
             }
-        }
-        button {
-            background-color: blue;
-            padding: 10px;
-            width: 30%;
-            transition: transform 0.3s ease;
-            margin: 20px 0 20px 0;
-            border-radius: 5px;
+            button:hover {
+                background-color: rgb(61, 61, 255);
+            }
         }
     }
-
     .agendamento {
-        h2 {
+         h2 {
             color: white;
             font-size: 70px;
-            font-family: "Inter", Arial;
             font-weight: 800;
             span {
-                color: blue;
+                color: $colorBlue;
             }
         }
         p {
-            font-family: "JetBrains Mono", Arial;
             font-size: 16px;
             color: #A6ACBE;
             margin: 20px 30px 50px 30px;
         }
-        h4 {
-            font-size: 16px;
-        }
-        .acrescimos {
-            margin-top: 20px;
-            display: flex;
-            gap: 40px;
-            input {
-                margin-bottom: 10px;
-            }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
         }
         #formAgendamento {
-            border-top: 1px solid rgba(255, 255, 255, 0.10);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-            border-left: 1px solid rgba(255, 255, 255, 0.10);
-            border-right: 1px solid rgba(255, 255, 255, 0.10);
             padding: 20px;
             margin: 20px 30px 90px 30px;
-            input {
-            color: $primary;
-        }
         }
         .form-label {
+            font-family: $font2;
             font-size: 16px;
             color: rgb(255, 255, 255);
-            font-family: "JetBrains Mono", Arial;
-        }
-        h3 {
-            font-size: 40px;
-            color: white;
-            font-weight: 800;
-            text-align: center;
-        }
-        #confirmacao {
-            margin: 80px;
-            padding: 30px;
-            button {
-                margin-left: 12px;
-                border-radius: 5px;
-            }
-            #detalhes {
-                font-family: "JetBrains Mono", Arial;
-                font-size: 16px;
-                color: #A6ACBE;
-                margin: 0px;
-            }
         }
         #total {
-            color: #A6ACBE;
             margin: 40px 0 0 0;
             margin-bottom: 0px;
+            font-family: $font2;
         }
         #btn-ag {
             button {
@@ -935,6 +871,8 @@ body {
     }
 
     .footer {
+        position: fixed;
+        width: 100%;
         padding: 30px 20px 0 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.10);
         color: #A6ACBE;
@@ -946,21 +884,19 @@ body {
             flex-wrap: wrap;
             gap: 0px;
             h2 {
-                font-size: 17px;
+                font-size: 14px;
                 font-weight: 800;
             }
             p {
-                font-family: $font2;
-                font-size: 14px;
+                font-size: 12px;
             }
         }
         .rodape {
-            font-family: $font2;
             border-top: 1px solid rgba(255, 255, 255, 0.10);
             text-align: center;
             margin: 20px 0 0px 0;
             padding: 20px 0 20px 0;
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 }

@@ -72,9 +72,8 @@ body .span {
 }
 .home .row p {
   margin-top: 15px;
-  font-family: "JetBrains Mono", Arial;
-  font-size: 13px;
-  color: white;
+  font-size: 15px;
+  color: #A6ACBE;
   margin: 10px 30px 10px 30px;
 }
 .home .row .btn-1 {
@@ -82,7 +81,7 @@ body .span {
   font-weight: 800;
   margin-top: 15px;
   margin-left: 25px;
-  background-color: white;
+  background-color: blue;
   padding: 7px;
   width: 43%;
   border-radius: 5px;
@@ -90,14 +89,14 @@ body .span {
 }
 .home .row .btn-1 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .home .row .btn-2 {
   border: 0;
   font-weight: 800;
   margin-top: 15px;
   background-color: #1b233d;
-  padding: 8px;
+  padding: 10px;
   width: 43%;
   transition: transform 0.3s ease;
   margin-bottom: 100px;
@@ -123,9 +122,8 @@ body .span {
   margin: 0  30px 0 30px;
 }
 .home .segunda-coluna p {
-  font-family: "JetBrains Mono", Arial;
-  color: white;
-  font-size: 12px;
+  color: #A6ACBE;
+  font-size: 15px;
   margin: 10px 30px 10px 30px;
 }
 .home #terceira-coluna .row {
@@ -157,9 +155,8 @@ body .span {
 }
 .home #terceira-coluna p {
   padding: 0px 0 35px 0px;
-  font-size: 16px;
+  font-size: 15px;
   color: #A6ACBE;
-  font-family: "JetBrains Mono", Arial;
 }
 .home #terceira-coluna h6 {
   margin-top: 5px;
@@ -175,13 +172,14 @@ body .span {
   margin: 150px 0px 0 0px;
 }
 .home .quarta-coluna p {
+  font-family: "Inter", Arial;
   color: blue;
   font-size: 30px;
   margin: 10px 30px 10px 30px;
 }
 .home .quarta-coluna .descricao {
-  color: white;
-  font-size: 13px;
+  color: #A6ACBE;
+  font-size: 15px;
 }
 .home .quarta-coluna .btn-1 {
   border: 0;
@@ -189,14 +187,14 @@ body .span {
   font-weight: 800;
   margin-top: 15px;
   margin-left: 25px;
-  background-color: white;
+  background-color: blue;
   padding: 7px;
   width: 43%;
   transition: transform 0.3s ease;
 }
 .home .quarta-coluna .btn-1 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .home .quarta-coluna .btn-2 {
   border: 0;
@@ -220,9 +218,8 @@ body .span {
   margin: 0px 30px 0 30px;
 }
 .servicos p {
-  font-size: 14px;
+  font-size: 15px;
   color: #A6ACBE;
-  font-family: "JetBrains Mono", Arial;
   margin: 10px 30px 10px 30px;
 }
 .servicos h3 {
@@ -269,6 +266,8 @@ body .span {
   color: #A6ACBE;
 }
 .servicos .row button {
+  padding: 7px;
+  background-color: blue;
   font-weight: 800;
 }
 .servicos .row button a {
@@ -278,7 +277,6 @@ body .span {
 
 .sobre .inicio {
   font-size: 14px;
-  font-family: "JetBrains Mono", Arial;
   color: blue;
   margin: 0px 30px 10px 30px;
 }
@@ -289,8 +287,7 @@ body .span {
 }
 .sobre p {
   font-size: 14px;
-  font-family: "JetBrains Mono", Arial;
-  color: white;
+  color: #A6ACBE;
   margin: 10px 30px 10px 30px;
 }
 .sobre .img1, .sobre .img2 {
@@ -319,7 +316,7 @@ body .span {
   margin: 40px 30px 0 30px;
 }
 .sobre .button1 {
-  border-radius: 0;
+  border-radius: 5px;
   border: 0;
   font-weight: 800;
   margin-top: 15px;
@@ -344,12 +341,10 @@ body .span {
 }
 .contato p {
   font-size: 14px;
-  font-family: "JetBrains Mono", Arial;
-  color: white;
+  color: #A6ACBE;
   margin: 10px 30px 10px 30px;
 }
 .contato form {
-  font-family: "JetBrains Mono", Arial;
   margin: 0 20px 0 20px;
 }
 .contato form .form-control {
@@ -370,11 +365,11 @@ body .span {
 }
 .contato button {
   background-color: blue;
-  padding: 10px;
-  width: 60%;
+  padding: 7px;
+  width: 70%;
   transition: transform 0.3s ease;
   margin: 20px 0 70px 0;
-  border-radius: 5pxpx;
+  border-radius: 5px;
   font-family: "Inter", Arial;
   font-weight: 800;
 }
@@ -390,47 +385,89 @@ body .span {
   color: blue;
 }
 .agendamento p {
-  font-family: "JetBrains Mono", Arial;
-  font-size: 14px;
+  font-size: 15px;
   margin: 10px 30px 10px 30px;
-  color: white;
+  color: #A6ACBE;
 }
-.agendamento .form-label {
-  font-size: 14px;
+.agendamento .cards-grid {
+  grid-template-columns: 1fr;
+}
+.agendamento .card-opcao {
+  display: block;
+  cursor: pointer;
+  margin: 0;
+}
+.agendamento .checkbox-servico-extra {
+  display: none !important;
+}
+.agendamento .titulo-secao {
   color: white;
-  font-family: "JetBrains Mono", Arial;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.agendamento .card-conteudo {
+  background-color: #060a1e;
+  border: 1px solid #0f1c30;
+  padding: 18px 20px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+}
+.agendamento .nome-servico {
+  color: #8492a6;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+.agendamento .preco-servico {
+  color: #1e70e6;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.agendamento .checkbox-servico-extra:checked + .card-conteudo {
+  border-color: #1e70e6;
+  background-color: #051329;
+  box-shadow: 0 0 8px rgba(30, 112, 230, 0.2);
+}
+.agendamento .checkbox-servico-extra:checked + .card-conteudo .nome-servico {
+  color: #ffffff;
+}
+.agendamento .card-opcao:hover .card-conteudo {
+  border-color: #162a4a;
 }
 .agendamento form {
-  font-family: "JetBrains Mono", Arial;
-  margin: 0 20px 0 20px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin: 0 20px 80px 20px;
+}
+.agendamento form .form-label {
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  color: white;
 }
 .agendamento form .form-control, .agendamento form .form-select {
   background-color: #060a1e;
-  color: white;
+  color: #8492a6;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 .agendamento form .form-control:focus, .agendamento form .form-select:focus {
   background-color: #060a1e;
-  color: white;
+  color: #8492a6;
   border: 1px solid blue;
   box-shadow: 0 0 5px blue;
 }
 .agendamento form .form-control::placeholder, .agendamento form .form-select::placeholder {
-  color: white !important;
+  color: #8492a6 !important;
   opacity: 1;
-}
-.agendamento h4 {
-  font-family: "JetBrains Mono", Arial;
-  font-size: 14px;
-}
-.agendamento .acrescimos {
-  margin-top: 20px;
-  display: block;
-  gap: 30px;
-}
-.agendamento .acrescimos input {
-  margin-bottom: 10px;
 }
 .agendamento h3 {
   font-size: 30px;
@@ -438,29 +475,16 @@ body .span {
   font-weight: 800;
   text-align: center;
 }
-.agendamento #confirmacao {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 80px;
-  margin-top: 20px;
-  padding: 35px;
-  box-shadow: 5px 5px 30px;
-}
-.agendamento #confirmacao button {
-  border-radius: 0;
-  margin-top: 20px;
-  padding: 8px;
-}
 .agendamento #total {
-  color: #A6ACBE;
   margin: 13px 0px 35px 0px;
 }
 .agendamento #btn-ag button {
   border-radius: 5px;
   background-color: blue;
   padding: 2px;
-  width: 60%;
+  width: 50%;
   transition: transform 0.3s ease;
-  margin: -20px 0 70px 0;
+  margin: -20px 0 30px 0;
   border: none;
   color: white;
   font-weight: bold;
@@ -480,24 +504,17 @@ body .span {
 }
 .footer .row h2 {
   font-family: "Inter", Arial;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 900;
 }
 .footer .row p {
   font-family: "Inter", Arial;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 @media (min-width: 769px) {
   body {
     margin-top: 140px;
-  }
-
-  .btn {
-    background-color: #1210c0;
-    transition: all 0.5s;
-    padding: 12px;
-    color: white;
   }
 
   .navbar .nav-link {
@@ -509,20 +526,17 @@ body .span {
     flex-grow: 0;
   }
 
+  .home .row h1 {
+    font-size: 85px;
+  }
+  .home .row p {
+    font-size: 16px;
+    color: #A6ACBE;
+  }
   .home .row img {
     border-radius: 10px;
     display: block;
     box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
-  }
-  .home .row h1 {
-    font-size: 85px;
-    color: white;
-    font-weight: 800;
-  }
-  .home .row p {
-    font-family: "JetBrains Mono", Arial;
-    font-size: 18px;
-    color: #A6ACBE;
   }
   .home .row .btn-1 {
     background-color: blue;
@@ -547,118 +561,69 @@ body .span {
     text-decoration: none;
     color: white;
   }
-  .home .coluna2 {
+  .home .segunda-coluna {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
-  .home .coluna2 h2 {
+  .home .segunda-coluna h2 {
     margin-top: 90px;
-    margin-left: 135px;
     font-size: 45px;
   }
-  .home .coluna2 h3 {
+  .home .segunda-coluna h3 {
     color: blue;
     font-size: 45px;
     font-family: "Inter", Arial;
-    margin-left: 135px;
   }
-  .home .coluna2 p {
+  .home .segunda-coluna p {
     color: #A6ACBE;
-    margin-left: 135px;
     font-size: 16px;
     border: 0;
   }
-  .home #coluninha p {
-    font-size: 16px;
-    color: #A6ACBE;
-    font-family: "JetBrains Mono", Arial;
-    border: 0;
-  }
-  .home #coluninha h6 {
-    margin-top: 5px;
-    color: #0032c8;
-    font-size: 14px;
-    margin-right: 250px;
-    padding: 10px;
-  }
-  .home #coluninha .row {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 80px 100px 60px 100px;
-    background-color: #060a1e;
-    height: 300px;
-  }
-  .home #coluninha .row #coluna1, .home #coluninha .row #coluna2, .home #coluninha .row #coluna3 {
-    padding: 10px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .home #coluninha .row #coluna1 h2, .home #coluninha .row #coluna2 h2, .home #coluninha .row #coluna3 h2 {
-    margin-top: 20px;
-    font-size: 25px;
-    font-weight: 800;
-    padding: 0 0px 15px 25px;
-    font-family: "Inter", Arial;
-  }
-  .home #coluninha .row #coluna4 {
-    padding: 10px;
-  }
-  .home #coluninha .row #coluna4 h2 {
-    margin-top: 20px;
-    font-size: 25px;
-    font-weight: 800;
-    padding: 0 0px 15px 25px;
-    font-family: "Inter", Arial;
-  }
-  .home .coluna4 h2 {
-    font-weight: 800;
+  .home .quarta-coluna h2 {
     font-size: 45px;
-    font-family: "Inter", Arial;
   }
-  .home .coluna4 p {
-    color: blue;
+  .home .quarta-coluna p {
     font-size: 42px;
-    font-family: "Inter", Arial;
   }
-  .home .coluna4 .descricao {
-    color: #A6ACBE;
-    font-size: 16px;
-  }
-  .home .coluna4 .btn-1 {
-    margin-left: 500px;
-    background-color: blue;
-    padding: 10px;
+  .home .quarta-coluna .btn-1 {
+    margin-left: 385px;
+    padding: 7px;
     width: 20%;
     transition: transform 0.3s ease;
   }
-  .home .coluna4 .btn-1 a {
-    text-decoration: none;
-    color: white;
-  }
-  .home .coluna4 .btn-2 {
-    background-color: #1b233d;
-    padding: 12px;
+  .home .quarta-coluna .btn-2 {
+    padding: 9px;
     width: 20%;
     transition: transform 0.3s ease;
     margin-bottom: 90px;
-  }
-  .home .coluna4 .btn-2 a {
-    text-decoration: none;
-    color: white;
   }
 
   .servicos h1 {
     font-size: 70px;
     font-weight: 800;
   }
-
-  .sobre .row .img1 {
-    border-radius: 10px;
-    display: block;
-    margin-top: 125px;
-    width: 100%;
-    box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
+  .servicos .card {
+    background-color: #060a1e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    transition: all 0.3s ease;
   }
+  .servicos .card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 10px 20px rgba(79, 94, 142, 0.447) !important;
+    border: 1px solid blue;
+  }
+  .servicos .card button {
+    margin-left: 50px;
+    margin-top: auto !important;
+    width: 70% !important;
+    padding: 7px !important;
+    background-color: #0000ff !important;
+    border: none !important;
+  }
+  .servicos .card button a {
+    text-decoration: none !important;
+    font-weight: bold;
+  }
+
   .sobre .row .inicio {
     color: blue;
     font-family: "JetBrains Mono", Arial;
@@ -672,14 +637,21 @@ body .span {
     color: blue;
   }
   .sobre .row p {
-    font-size: 16px;
-    font-family: "JetBrains Mono", Arial;
+    font-size: 15px;
+  }
+  .sobre .row .img1 {
+    border-radius: 10px;
+    display: block;
+    margin-top: 125px;
+    width: 100%;
+    box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
   }
   .sobre .row .img2 {
     border-radius: 10px;
     display: block;
     width: 100%;
-    margin-top: 200px;
+    height: 650px;
+    margin-top: 155px;
     box-shadow: 2px 2px 40px rgba(79, 94, 142, 0.447);
   }
   .sobre .row .h6 {
@@ -710,8 +682,7 @@ body .span {
     margin: 5px 30px 5px 30px;
   }
   .sobre .row p {
-    font-size: 14px;
-    font-family: "JetBrains Mono", Arial;
+    font-size: 15px;
     color: #A6ACBE;
     margin: 5px 30px 5px 30px;
   }
@@ -723,8 +694,7 @@ body .span {
     font-weight: 800;
   }
   .sobre .row3 p {
-    font-size: 16px;
-    font-family: "JetBrains Mono", Arial;
+    font-size: 15px;
     color: #A6ACBE;
     margin: 10px 30px 10px 30px;
   }
@@ -747,46 +717,47 @@ body .span {
   }
 
   .contato h2 {
-    font-size: 60px;
+    font-size: 68px;
     font-weight: 800;
   }
   .contato h2 span {
     color: blue;
   }
   .contato p {
-    font-size: 16px;
-    font-family: "JetBrains Mono", Arial;
+    font-size: 15px;
   }
   .contato form {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
     margin: 20px 30px 90px 30px;
   }
-  .contato .form-label {
-    font-size: 16px;
-    color: white;
+  .contato form .form-label {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     font-family: "JetBrains Mono", Arial;
-  }
-  .contato .form-control {
-    background-color: #060a1e;
     color: white;
+  }
+  .contato form .form-control {
+    background-color: #060a1e;
+    color: #8492a6;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
   }
-  .contato .form-control:focus {
+  .contato form .form-control:focus {
     background-color: #060a1e;
-    color: white;
+    color: #8492a6;
     border: 1px solid blue;
     box-shadow: 0 0 5px blue;
   }
-  .contato .form-control::placeholder {
-    color: white !important;
+  .contato form .form-control::placeholder {
+    color: #8492a6 !important;
     opacity: 1;
   }
-  .contato button {
+  .contato form button {
+    border: 0;
     background-color: blue;
     padding: 10px;
     width: 30%;
@@ -794,73 +765,41 @@ body .span {
     margin: 20px 0 20px 0;
     border-radius: 5px;
   }
+  .contato form button:hover {
+    background-color: #3d3dff;
+  }
 
   .agendamento h2 {
     color: white;
     font-size: 70px;
-    font-family: "Inter", Arial;
     font-weight: 800;
   }
   .agendamento h2 span {
     color: blue;
   }
   .agendamento p {
-    font-family: "JetBrains Mono", Arial;
     font-size: 16px;
     color: #A6ACBE;
     margin: 20px 30px 50px 30px;
   }
-  .agendamento h4 {
-    font-size: 16px;
-  }
-  .agendamento .acrescimos {
-    margin-top: 20px;
-    display: flex;
-    gap: 40px;
-  }
-  .agendamento .acrescimos input {
-    margin-bottom: 10px;
+  .agendamento .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
   .agendamento #formAgendamento {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px;
     margin: 20px 30px 90px 30px;
   }
-  .agendamento #formAgendamento input {
-    color: #060a1e;
-  }
   .agendamento .form-label {
-    font-size: 16px;
-    color: white;
-    font-family: "JetBrains Mono", Arial;
-  }
-  .agendamento h3 {
-    font-size: 40px;
-    color: white;
-    font-weight: 800;
-    text-align: center;
-  }
-  .agendamento #confirmacao {
-    margin: 80px;
-    padding: 30px;
-  }
-  .agendamento #confirmacao button {
-    margin-left: 12px;
-    border-radius: 5px;
-  }
-  .agendamento #confirmacao #detalhes {
     font-family: "JetBrains Mono", Arial;
     font-size: 16px;
-    color: #A6ACBE;
-    margin: 0px;
+    color: white;
   }
   .agendamento #total {
-    color: #A6ACBE;
     margin: 40px 0 0 0;
     margin-bottom: 0px;
+    font-family: "JetBrains Mono", Arial;
   }
   .agendamento #btn-ag button {
     border-radius: 5px;
@@ -872,6 +811,8 @@ body .span {
   }
 
   .footer {
+    position: fixed;
+    width: 100%;
     padding: 30px 20px 0 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #A6ACBE;
@@ -885,20 +826,18 @@ body .span {
     gap: 0px;
   }
   .footer .row h2 {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 800;
   }
   .footer .row p {
-    font-family: "JetBrains Mono", Arial;
-    font-size: 14px;
+    font-size: 12px;
   }
   .footer .rodape {
-    font-family: "JetBrains Mono", Arial;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     margin: 20px 0 0px 0;
     padding: 20px 0 20px 0;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

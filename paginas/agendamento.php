@@ -5,24 +5,24 @@
 
     <form id="formAgendamento" class="row g-3" action="paginas/salvar_agendamento.php" method="POST">
       <div class="col-md-6">
-        <label for="nome" class="form-label">Nome Completo</label>
+        <label for="nome" class="form-label">NOME COMPLETO</label>
         <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required>
       </div>
       <div class="col-md-6">
-        <label for="telefone" class="form-label">WhatsApp</label>
+        <label for="telefone" class="form-label">WHATSAPP</label>
         <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
       </div>
       <div class="col-md-6">
-        <label for="placa" class="form-label">Placa</label>
+        <label for="placa" class="form-label">PLACA</label>
         <input type="text" class="form-control" id="placa" name="placa" placeholder="ABC-1234" required>
       </div>
       <div class="col-md-6">
-        <label for="veiculo" class="form-label">Veículo</label>
+        <label for="veiculo" class="form-label">VEÍCULO</label>
         <input type="text" class="form-control" id="veiculo" name="veiculo" placeholder="Ex: Corolla Cinza 2022"
           required>
       </div>
       <div class="col-md-12">
-        <label for="servico" class="form-label">Selecione um serviço</label>
+        <label for="servico" class="form-label">SELECIONE UM SERVIÇO</label>
         <select id="servico" name="servico" class="form-select" required>
           <option value="" data-preco="0">Selecione um serviço</option>
           <option value="1" data-preco="150">Lavagem Detalhada - R$ 150</option>
@@ -37,11 +37,11 @@
         </select>
       </div>
       <div class="col-md-6">
-        <label for="data" class="form-label">Data</label>
+        <label for="data" class="form-label">DATA</label>
         <input type="date" class="form-control" id="data" name="data" required>
       </div>
       <div class="col-md-6">
-        <label for="horario" class="form-label">Horário</label>
+        <label for="horario" class="form-label">HORÁRIO</label>
         <select id="horario" name="horario" class="form-select" required>
           <option value="">Selecione um horário</option>
           <option>08:00</option>
@@ -68,13 +68,38 @@
       </div>
 
       <div class="col-12">
-        <h4>Acréscimos Opcionais</h4>
-        <div class="acrescimos">
-          <input type="checkbox" name="extras[]" value="10" data-preco="200"> Polimento Técnico <br><br>
-          <input type="checkbox" name="extras[]" value="11" data-preco="200"> Hidratação de Couro <br><br>
-          <input type="checkbox" name="extras[]" value="12" data-preco="200"> Cristalização de Vidros <br><br>
-          <input type="checkbox" name="extras[]" value="13" data-preco="400"> Limpeza do Motor <br><br>
-          <input type="checkbox" name="extras[]" value="14" data-preco="80"> Cera Líquida <br><br>
+        <h4 class="titulo-secao">ACRÉSCIMOS OPCIONAIS</h4>
+        <div class="cards-grid">
+          <?php
+          try {
+              $query_extras = "SELECT id_servico, nome_servico, preco FROM servicos WHERE tipo_servico = 'extra'";
+              $stmt_extras = $pdo->query($query_extras);
+              $extras = $stmt_extras->fetchAll(PDO::FETCH_ASSOC);
+
+              if (count($extras) > 0) {
+                  foreach ($extras as $servico) {
+                      $id = $servico['id_servico'];
+                      $nome = $servico['nome_servico'];
+                      $preco_cru = $servico['preco']; 
+                      $preco_formatado = number_format($preco_cru, 0, ',', '.');
+                      
+                      echo '
+                      <label class="card-opcao" for="extra_' . $id . '">
+                          <input type="checkbox" name="extras[]" value="' . $id . '" data-preco="' . $preco_cru . '" id="extra_' . $id . '" class="checkbox-servico-extra">
+                          <div class="card-conteudo">
+                              <span class="nome-servico">' . htmlspecialchars($nome) . '</span>
+                              <span class="preco-servico">+R$ ' . $preco_formatado . '</span>
+                          </div>
+                      </label>
+                      ';
+                  }
+              } else {
+                  echo '<p class="text-muted">Nenhum acréscimo disponível no momento.</p>';
+              }
+          } catch (PDOException $e) {
+              echo '<p class="text-danger">Erro ao carregar opcionais: ' . htmlspecialchars($e->getMessage()) . '</p>';
+          }
+          ?>
         </div>
       </div>
 
@@ -89,35 +114,32 @@
 
     <script src="https://unpkg.com/imask"></script>
     <script>
-      // 1. Aplica a máscara no campo de Telefone/WhatsApp
       const campoTelefone = document.getElementById('telefone');
       const mascaraTelefone = IMask(campoTelefone, {
         mask: '(00) 00000-0000'
       });
 
-      // 2. Aplica a máscara inteligente na Placa (Padrão Antigo e Mercosul)
       const campoPlaca = document.getElementById('placa');
       const mascaraPlaca = IMask(campoPlaca, {
-        mask: 'aaa-0[a0]00', // Aceita letra ou número no 5º caractere
+        mask: 'aaa-0[a0]00',
         prepare: function (str) {
-          return str.toUpperCase(); // Força todas as letras a ficarem maiúsculas
+          return str.toUpperCase();
         }
       });
     </script>
+    
     <script>
       const selectServico = document.getElementById('servico');
-      const checkboxesExtras = document.querySelectorAll('input[name="extras[]"]');
       const textoTotal = document.getElementById('total');
 
       function calcularTotal() {
         let total = 0;
 
-        // 1. Pega o preço do serviço selecionado
         const opcaoSelecionada = selectServico.options[selectServico.selectedIndex];
         const precoServico = parseFloat(opcaoSelecionada.getAttribute('data-preco')) || 0;
         total += precoServico;
 
-        // 2. Soma o preço dos extras marcados
+        const checkboxesExtras = document.querySelectorAll('input[name="extras[]"]');
         checkboxesExtras.forEach(checkbox => {
           if (checkbox.checked) {
             const precoExtra = parseFloat(checkbox.getAttribute('data-preco')) || 0;
@@ -125,15 +147,19 @@
           }
         });
 
-        // 3. Atualiza o texto na tela formatado como moeda real
         textoTotal.innerHTML = `TOTAL ESTIMADO: R$ ${total.toFixed(2).replace('.', ',')}`;
       }
 
-      // Escuta as mudanças no select e nos checkboxes
       selectServico.addEventListener('change', calcularTotal);
-      checkboxesExtras.forEach(checkbox => {
-        checkbox.addEventListener('change', calcularTotal);
-      });
+      
+      const gridCards = document.querySelector('.cards-grid');
+      if (gridCards) {
+        gridCards.addEventListener('change', function(e) {
+          if(e.target && e.target.name === 'extras[]') {
+              calcularTotal();
+          }
+        });
+      }
     </script>
   </div>
 </div>
