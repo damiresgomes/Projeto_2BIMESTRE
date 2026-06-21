@@ -1,7 +1,8 @@
 <?php
 require "config.php";
 
-$base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"]; //pega o nome do servidor e o nome do script
+$base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"];
+//$base = "https://britoesteticaautomotiva.unaux.com/";
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ $base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"]; 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <title>Lava Jato Brito</title>
+    <title>Brito Estética Automotiva</title>
 
     <base href="<?= $base ?>">
 
@@ -27,9 +28,9 @@ $base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"]; 
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
 
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="imagens/icone.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css?v">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -111,6 +112,8 @@ $base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"]; 
 
                 <div class="col">
                     <h2>REDES SOCIAIS</h2>
+                    <a href="https://www.instagram.com/brito_esteticaautomotiva_?igsh=NTJ3bml0amxlZ3F4" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5519981339017" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>

@@ -6,19 +6,19 @@
     <form id="formAgendamento" class="row g-3" action="paginas/salvar_agendamento.php" method="POST">
       <div class="col-md-6">
         <label for="nome" class="form-label">NOME COMPLETO</label>
-        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="off" required>
       </div>
       <div class="col-md-6">
         <label for="telefone" class="form-label">WHATSAPP</label>
-        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" autocomplete="off" required>
       </div>
       <div class="col-md-6">
         <label for="placa" class="form-label">PLACA</label>
-        <input type="text" class="form-control" id="placa" name="placa" placeholder="ABC-1234" required>
+        <input type="text" class="form-control" id="placa" name="placa" placeholder="ABC-1234" autocomplete="off" required>
       </div>
       <div class="col-md-6">
         <label for="veiculo" class="form-label">VEÍCULO</label>
-        <input type="text" class="form-control" id="veiculo" name="veiculo" placeholder="Ex: Corolla Cinza 2022"
+        <input type="text" class="form-control" id="veiculo" name="veiculo" autocomplete="off" placeholder="Ex: Corolla Cinza 2022"
           required>
       </div>
       <div class="col-md-12">
@@ -111,22 +111,6 @@
         <button type="submit" class="btn btn-primary">CONFIRMAR AGENDAMENTO</button>
       </div>
     </form>
-
-    <script src="https://unpkg.com/imask"></script>
-    <script>
-      const campoTelefone = document.getElementById('telefone');
-      const mascaraTelefone = IMask(campoTelefone, {
-        mask: '(00) 00000-0000'
-      });
-
-      const campoPlaca = document.getElementById('placa');
-      const mascaraPlaca = IMask(campoPlaca, {
-        mask: 'aaa-0[a0]00',
-        prepare: function (str) {
-          return str.toUpperCase();
-        }
-      });
-    </script>
     
     <script>
       const selectServico = document.getElementById('servico');
@@ -160,6 +144,22 @@
           }
         });
       }
+    </script>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+      const campoTelefone = document.getElementById('telefone');
+      const mascaraTelefone = IMask(campoTelefone, {
+        mask: '(00) 00000-0000'
+      });
+
+      const campoPlaca = document.getElementById('placa');
+      const mascaraPlaca = IMask(campoPlaca, {
+        mask: 'aaa-0[a0]00',
+        prepare: function (str) {
+          return str.toUpperCase();
+        }
+      });
     </script>
   </div>
 </div>

@@ -1,6 +1,28 @@
 <?php
 require_once '../config.php';
 
+function gerarMensagemWhatsapp($nome, $telefone, $veiculo, $placa, $servicoPrincipal, $nomesExtras, $data, $horario) {
+    $texto = "*Agendamento Solicitado!* 🚗✨\n\n";
+    $texto .= "Olá! Gostaria de confirmar o meu agendamento na estética.\n\n";
+    $texto .= "*Detalhes do Pedido:*\n";
+    $texto .= "*Cliente:* " . $nome . "\n";
+    $texto .= "*Telefone:* " . $telefone . "\n";
+    $texto .= "*Veículo:* " . $veiculo . " (Placa: " . $placa . ")\n";
+    $texto .= "*Serviço Principal:* " . $servicoPrincipal . "\n";
+
+    if (!empty($nomesExtras)) {
+        $texto .= "*Acréscimos Opcionais:*\n";
+        foreach ($nomesExtras as $nome_extra) {
+            $texto .= "  - " . $nome_extra . "\n";
+        }
+    }
+
+    $texto .= "*Data e Horário:* " . date('d/m/Y', strtotime($data)) . " às " . $horario . "\n\n";
+    $texto .= "_Aguardo a confirmação de vocês! Obrigada(o)._";
+
+    return urlencode($texto);
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $nome = trim($_POST['nome']);
@@ -64,25 +86,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdo->commit();
 
         $numero_whatsapp = "5519981392929";
-        $texto_mensagem = "*Agendamento Solicitado!* 🚗✨\n\n";
-        $texto_mensagem .= "Olá! Gostaria de confirmar o meu agendamento na estética.\n\n";
-        $texto_mensagem .= "*Detalhes do Pedido:*\n";
-        $texto_mensagem .= "*Cliente:* " . $nome . "\n";
-        $texto_mensagem .= "*Telefone:* " . $telefone . "\n";
-        $texto_mensagem .= "*Veículo:* " . $veiculo . " (Placa: " . $placa . ")\n";
-        $texto_mensagem .= "*Serviço Principal:* " . $nome_servico_principal . "\n";
+        
+        $texto_url = gerarMensagemWhatsapp(
+            $nome, 
+            $telefone, 
+            $veiculo, 
+            $placa, 
+            $nome_servico_principal, 
+            $nomes_extras, 
+            $data, 
+            $horario
+        );
 
-        if (!empty($nomes_extras)) {
-            $texto_mensagem .= "*Acréscimos Opcionais:*\n";
-            foreach ($nomes_extras as $nome_extra) {
-                $texto_mensagem .= "  - " . $nome_extra . "\n";
-            }
-        }
-
-        $texto_mensagem .= "*Data e Horário:* " . date('d/m/Y', strtotime($data)) . " às " . $horario . "\n\n";
-        $texto_mensagem .= "_Aguardo a confirmação de vocês! Obrigada(o)._";
-
-        $texto_url = urlencode($texto_mensagem);
         $link_whatsapp = "https://api.whatsapp.com/send?phone=" . $numero_whatsapp . "&text=" . $texto_url;
 
         echo "<script>

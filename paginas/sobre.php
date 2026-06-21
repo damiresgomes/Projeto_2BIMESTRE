@@ -44,7 +44,7 @@
             <div class="col-12">
                 <h3 class="text-center">VENHAM SENTIR A DIFERENÇA</h3>
                 <p class="text-center">Reserve seu horário e descubra por que somos a escolha de quem entende <br> de carro.</p>
-                <button class="button1 text-center">
+                <button id="button1" class="text-center">
                     <a href="agendamento">
                         AGENDE AGORA
                     </a>

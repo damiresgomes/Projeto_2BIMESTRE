@@ -26,6 +26,7 @@ body .span {
   background: #060a1e !important;
   width: 100%;
   position: fixed;
+  z-index: 99;
   top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -43,8 +44,8 @@ body .span {
 }
 .navbar .btn-agendamento {
   background-color: #1210c0;
-  transition: all 0.5s;
-  padding: 10px;
+  transition: all 0.3s ease;
+  padding: 7px;
   color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -87,6 +88,9 @@ body .span {
   border-radius: 5px;
   transition: transform 0.3s ease;
 }
+.home .row .btn-1:hover {
+  background-color: #3460e4;
+}
 .home .row .btn-1 a {
   text-decoration: none;
   color: white;
@@ -101,6 +105,9 @@ body .span {
   transition: transform 0.3s ease;
   margin-bottom: 100px;
   border-radius: 5px;
+}
+.home .row .btn-2:hover {
+  background-color: #222c4b;
 }
 .home .row .btn-2 a {
   text-decoration: none;
@@ -192,6 +199,9 @@ body .span {
   width: 43%;
   transition: transform 0.3s ease;
 }
+.home .quarta-coluna .btn-1:hover {
+  background-color: #3460e4;
+}
 .home .quarta-coluna .btn-1 a {
   text-decoration: none;
   color: white;
@@ -205,13 +215,23 @@ body .span {
   padding: 8px;
   width: 43%;
   transition: transform 0.3s ease;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
+}
+.home .quarta-coluna .btn-2:hover {
+  background-color: #222c4b;
 }
 .home .quarta-coluna .btn-2 a {
   text-decoration: none;
   color: white;
 }
 
+.servicos {
+  display: block !important;
+  height: auto !important;
+  min-height: 100% !important;
+  overflow: visible !important;
+  clear: both !important;
+}
 .servicos h1 {
   font-size: 50px;
   font-weight: 800;
@@ -234,8 +254,12 @@ body .span {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .servicos .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  height: auto !important;
+  clear: both !important;
   row-gap: 60px;
-  margin: 20px 30px 90px 30px;
+  margin: 20px 30px 0px 30px;
   height: 480px;
 }
 .servicos .row .preco {
@@ -269,6 +293,10 @@ body .span {
   padding: 7px;
   background-color: blue;
   font-weight: 800;
+  transition: all 0.3s ease;
+}
+.servicos .row button:hover {
+  background-color: #3460e4;
 }
 .servicos .row button a {
   color: white;
@@ -293,6 +321,12 @@ body .span {
 .sobre .img1, .sobre .img2 {
   display: none;
 }
+.sobre .h4 {
+  border: 0;
+  margin: 0 30px 0 30px;
+  padding: 30px 0 0 0;
+  font-weight: 800;
+}
 .sobre h4 {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin: 0 30px 0 30px;
@@ -315,19 +349,20 @@ body .span {
   font-weight: 800;
   margin: 40px 30px 0 30px;
 }
-.sobre .button1 {
+.sobre #button1 {
   border-radius: 5px;
   border: 0;
   font-weight: 800;
-  margin-top: 15px;
-  margin-left: 100px;
+  margin: 15px 0 20px 90px;
   background-color: blue;
   padding: 7px;
-  width: 43%;
-  transition: transform 0.3s ease;
-  margin-bottom: 100px;
+  width: 50%;
+  transition: all 0.3s ease;
 }
-.sobre .button1 a {
+.sobre #button1:hover {
+  background-color: #3460e4;
+}
+.sobre #button1 a {
   text-decoration: none;
   color: white;
   font-weight: 800;
@@ -345,30 +380,33 @@ body .span {
   margin: 10px 30px 10px 30px;
 }
 .contato form {
-  margin: 0 20px 0 20px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 20px 110px 20px;
 }
 .contato form .form-control {
-  background-color: #060a1e;
+  background-color: #060a1e !important;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 .contato form .form-control:focus {
-  background-color: #060a1e;
+  background-color: #060a1e !important;
   color: white;
   border: 1px solid blue;
   box-shadow: 0 0 5px blue;
 }
 .contato form .form-control::placeholder {
-  color: white !important;
+  color: white;
   opacity: 1;
 }
 .contato button {
   background-color: blue;
   padding: 7px;
-  width: 70%;
+  width: 80%;
   transition: transform 0.3s ease;
-  margin: 20px 0 70px 0;
+  margin: 20px 0 30px 0;
   border-radius: 5px;
   font-family: "Inter", Arial;
   font-weight: 800;
@@ -398,7 +436,7 @@ body .span {
   margin: 0;
 }
 .agendamento .checkbox-servico-extra {
-  display: none !important;
+  display: none;
 }
 .agendamento .titulo-secao {
   color: white;
@@ -442,10 +480,11 @@ body .span {
   border-color: #162a4a;
 }
 .agendamento form {
+  background-color: #060a1e;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  margin: 0 20px 80px 20px;
+  margin: 0 20px 110px 20px;
 }
 .agendamento form .form-label {
   font-weight: 600;
@@ -454,20 +493,25 @@ body .span {
   color: white;
 }
 .agendamento form .form-control, .agendamento form .form-select {
-  background-color: #060a1e;
+  background-color: #060a1e !important;
   color: #8492a6;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 .agendamento form .form-control:focus, .agendamento form .form-select:focus {
-  background-color: #060a1e;
+  background-color: #060a1e !important;
   color: #8492a6;
   border: 1px solid blue;
   box-shadow: 0 0 5px blue;
 }
 .agendamento form .form-control::placeholder, .agendamento form .form-select::placeholder {
-  color: #8492a6 !important;
+  color: #8492a6;
   opacity: 1;
+}
+.agendamento form input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(1);
+  opacity: 0.7;
 }
 .agendamento h3 {
   font-size: 30px;
@@ -476,13 +520,14 @@ body .span {
   text-align: center;
 }
 .agendamento #total {
-  margin: 13px 0px 35px 0px;
+  font-family: "JetBrains Mono", Arial;
+  margin: 13px 0px 35px 4px;
 }
 .agendamento #btn-ag button {
   border-radius: 5px;
   background-color: blue;
-  padding: 2px;
-  width: 50%;
+  padding: 7px;
+  width: 90%;
   transition: transform 0.3s ease;
   margin: -20px 0 30px 0;
   border: none;
@@ -490,8 +535,16 @@ body .span {
   font-weight: bold;
   font-family: "Inter", Arial;
 }
+.agendamento #btn-ag button:hover {
+  background-color: #3460e4;
+}
 
 .footer {
+  display: block !important;
+  clear: both !important;
+  position: relative !important;
+  width: 100% !important;
+  margin-top: 90px !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #A6ACBE;
   padding: 20px;
@@ -510,6 +563,20 @@ body .span {
 .footer .row p {
   font-family: "Inter", Arial;
   font-size: 13px;
+}
+.footer .row .col a {
+  text-decoration: none;
+}
+.footer .row .col a .fa-brands {
+  color: #A6ACBE;
+  font-size: 18px;
+}
+.footer .rodape {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin: 20px 0 0px 0;
+  padding: 20px 0 20px 0;
+  font-size: 12px;
 }
 
 @media (min-width: 769px) {
@@ -594,33 +661,42 @@ body .span {
     padding: 9px;
     width: 20%;
     transition: transform 0.3s ease;
-    margin-bottom: 90px;
+    margin-bottom: 20px;
   }
 
+  .servicos .dropdown {
+    float: right;
+    margin-right: 50px;
+  }
   .servicos h1 {
     font-size: 70px;
     font-weight: 800;
   }
   .servicos .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #060a1e;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    padding: 24px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     transition: all 0.3s ease;
   }
   .servicos .card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 10px 20px rgba(79, 94, 142, 0.447) !important;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(79, 94, 142, 0.447);
     border: 1px solid blue;
   }
   .servicos .card button {
     margin-left: 50px;
-    margin-top: auto !important;
-    width: 70% !important;
-    padding: 7px !important;
-    background-color: #0000ff !important;
-    border: none !important;
+    margin-top: auto;
+    width: 70%;
+    padding: 7px;
+    background-color: #0000ff;
+    border: none;
   }
   .servicos .card button a {
-    text-decoration: none !important;
+    text-decoration: none;
     font-weight: bold;
   }
 
@@ -698,22 +774,9 @@ body .span {
     color: #A6ACBE;
     margin: 10px 30px 10px 30px;
   }
-  .sobre .row3 .button1 {
-    background-color: blue;
-    border: 0;
-    text-align: center;
-    margin-left: 530px;
-    padding: 10px;
+  .sobre .row3 #button1 {
+    margin: 15px 0 20px 520px;
     width: 20%;
-    transition: transform 0.3s ease;
-    margin-bottom: 90px;
-    border-radius: 5px;
-  }
-  .sobre .row3 .button1 a {
-    text-decoration: none;
-    color: white;
-    font-weight: 800;
-    font-family: "Inter", Arial;
   }
 
   .contato h2 {
@@ -730,7 +793,7 @@ body .span {
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
-    margin: 20px 30px 90px 30px;
+    margin: 20px 30px 110px 30px;
   }
   .contato form .form-label {
     text-transform: uppercase;
@@ -753,13 +816,13 @@ body .span {
     box-shadow: 0 0 5px blue;
   }
   .contato form .form-control::placeholder {
-    color: #8492a6 !important;
+    color: #8492a6;
     opacity: 1;
   }
   .contato form button {
     border: 0;
     background-color: blue;
-    padding: 10px;
+    padding: 7px;
     width: 30%;
     transition: transform 0.3s ease;
     margin: 20px 0 20px 0;
@@ -789,7 +852,7 @@ body .span {
   }
   .agendamento #formAgendamento {
     padding: 20px;
-    margin: 20px 30px 90px 30px;
+    margin: 20px 30px 110px 30px;
   }
   .agendamento .form-label {
     font-family: "JetBrains Mono", Arial;
@@ -804,15 +867,13 @@ body .span {
   .agendamento #btn-ag button {
     border-radius: 5px;
     background-color: blue;
-    padding: 10px;
+    padding: 7px;
     width: 30%;
     transition: transform 0.3s ease;
     margin: 25px 0 50px 0;
   }
 
   .footer {
-    position: fixed;
-    width: 100%;
     padding: 30px 20px 0 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #A6ACBE;
@@ -830,13 +891,6 @@ body .span {
     font-weight: 800;
   }
   .footer .row p {
-    font-size: 12px;
-  }
-  .footer .rodape {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-    margin: 20px 0 0px 0;
-    padding: 20px 0 20px 0;
     font-size: 12px;
   }
 }

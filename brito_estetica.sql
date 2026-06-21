@@ -63,35 +63,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `nome`, `telefone`) VALUES
-(1, 'João Silva', '19997778890'),
-(2, 'Maria Souza', '19998889911'),
-(3, 'Carlos Pereira', '19998889900'),
-(4, 'Ana Paula Ferreira', '19987654321'),
-(5, 'Carlos Eduardo Silva', '19991234567'),
-(6, 'João Pedro Almeida', '19995554433'),
-(7, 'Patrícia Gomes', '19993334455'),
-(8, 'Mateus Carvalho', '19990001122'),
-(9, 'André Luiz Moreira', '19981234567'),
-(10, 'Cláudia Regina Tavares', '19982345678'),
-(11, 'Diego Henrique Barbosa', '19983456789'),
-(12, 'Eliane Cristina Lopes', '19984567890'),
-(13, 'Fábio Augusto Ribeiro', '19985678901'),
-(14, 'Gisele Maria Fernandes', '19986789012'),
-(15, 'Henrique Costa Ramos', '19987890123'),
-(16, 'Iara Beatriz Machado', '19988901234'),
-(17, 'José Antonio Pacheco', '19989012345'),
-(18, 'Kelly Aparecida Moura', '19980123456'),
-(19, 'Leonardo Vinícius Prado', '19981235679'),
-(20, 'Marta Helena Cardoso', '19982346780'),
-(21, 'Natália Borges Figueiredo', '19983457891'),
-(22, 'Otávio César Nunes', '19984568902'),
-(23, 'Priscila Andrade Correia', '19985679013'),
-(24, 'Rodrigo Matheus Cunha', '19986780124'),
-(25, 'Simone Alves Pereira', '19987891235'),
-(26, 'Tiago Emanuel Duarte', '19988902346'),
-(27, 'Vanessa Cristina Rocha', '19989013457'),
-(28, 'Wellington José Martins', '19980124568'),
-(29, 'Damires Sales de Brito', '19992395358');
+
 
 -- --------------------------------------------------------
 
