@@ -22,16 +22,16 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <h6>PRINCÍPIOS QUE GUIAM<br> CADA SERVIÇO.</h2>
-                    <h4 class="h4">Excelência sem atalhos</h4>
+                    <h4 class="h4">EXCELÊNCIA SEM ATALHOS</h4>
                     <p>Métodos profissionais, produtos premium e zero tolerância a entregas medianas.</p>
                     <br>
-                    <h4>Domínio técnico</h4>
+                    <h4>DOMÍNIO TÉCNICO</h4>
                     <p>Equipe treinada em técnicas de detailing reconhecidas internacionalmente.</p>
                     <br>
-                    <h4>Cuidado verdadeiro</h4>
+                    <h4>CUIDADO VERDADEIRO</h4>
                     <p>Tratamos cada veículo com a mesma atenção que daríamos ao nosso próprio.</p>
                     <br>
-                    <h4>Confiança do cliente</h4>
+                    <h4>CONFIANÇA DO CLIENTE</h4>
                     <p>Transparência total, comunicação clara e garantia em todos os serviços.</p>
             </div>
 

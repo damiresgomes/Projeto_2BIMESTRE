@@ -36,6 +36,7 @@
                             LIMIT 9";
 
             $consulta = $pdo->prepare($sqlServicos);
+
             $consulta->execute();
 
             $dadosServicos = $consulta->fetchAll(PDO::FETCH_OBJ);

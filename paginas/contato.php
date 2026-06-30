@@ -34,7 +34,6 @@
     </div>
 
     <script>
-
     function enviarWhatsApp() {
     let nome = document.getElementById("nome").value;
     let telefone = document.getElementById("telefone").value;
@@ -43,7 +42,6 @@
     let mensagem = document.getElementById("mensagem").value;
 
     let numeroEmpresa = "5519981339017";
-
     let texto = `Olá, meu nome é ${nome}. Mensagem: ${mensagem}. Assunto: ${assunto}`;
 
     let url = `https://wa.me/${numeroEmpresa}?text=${encodeURIComponent(texto)}`;

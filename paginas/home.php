@@ -88,7 +88,7 @@
             </button>
 
             <button class="btn-2">
-                <a href="https://wa.me/5511981392929">
+                <a href="https://wa.me/5519981339017" target="_blank">
                     WHATSAPP
                 </a>
             </button>

@@ -11,6 +11,7 @@ function gerarMensagemWhatsapp($nome, $telefone, $veiculo, $placa, $servicoPrinc
     $texto .= "*Serviço Principal:* " . $servicoPrincipal . "\n";
 
     if (!empty($nomesExtras)) {
+
         $texto .= "*Acréscimos Opcionais:*\n";
         foreach ($nomesExtras as $nome_extra) {
             $texto .= "  - " . $nome_extra . "\n";
@@ -32,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $servico_principal_id = trim($_POST['servico']);
     $data = trim($_POST['data']);
     $horario = trim($_POST['horario']);
-    
+
 
     $extras_selecionados = isset($_POST['extras']) ? $_POST['extras'] : [];
     
@@ -43,6 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $sql_cliente = "INSERT INTO clientes (nome, telefone) VALUES (:nome, :telefone)";
         $stmt_cliente = $pdo->prepare($sql_cliente);
+
         $stmt_cliente->bindParam(':nome', $nome);
         $stmt_cliente->bindParam(':telefone', $telefone);
         $stmt_cliente->execute();
@@ -85,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $pdo->commit();
 
-        $numero_whatsapp = "5519981392929";
+        $numero_whatsapp = "5519981339017";
         
         $texto_url = gerarMensagemWhatsapp(
             $nome, 

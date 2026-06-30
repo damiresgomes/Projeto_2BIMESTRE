@@ -3,7 +3,6 @@ require "config.php";
 
 $base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"];
 //$base = "https://britoesteticaautomotiva.unaux.com/";
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -79,7 +78,7 @@ $base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"];
         }
 
         $page = $p[0] ?? "home";
-        $pagina = "paginas/{$page}.php";
+        $pagina = "paginas/{$page}.php"; 
 
         if (file_exists($pagina)) {
             include $pagina;
@@ -119,6 +118,7 @@ $base = "http://" . $_SERVER["SERVER_NAME"] . ":8080". $_SERVER["SCRIPT_NAME"];
         </div>
 
         <p class="rodape text-center">© 2026 Brito Estética Automotiva. Todos os direitos reservados.</p>
+        <h6 class="text-center"><a href="loginadmin">Admin</a></h6>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/fslightbox.js"></script>

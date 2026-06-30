@@ -18,7 +18,9 @@
       </div>
       <div class="col-md-6">
         <label for="veiculo" class="form-label">VEÍCULO</label>
-        <input type="text" class="form-control" id="veiculo" name="veiculo" autocomplete="off" placeholder="Ex: Corolla Cinza 2022"
+        <input type="text" class="form-control" id="veiculo" name="veiculo" 
+        
+        placeholder="Ex: Corolla Cinza 2022"
           required>
       </div>
       <div class="col-md-12">
@@ -75,14 +77,13 @@
               $query_extras = "SELECT id_servico, nome_servico, preco FROM servicos WHERE tipo_servico = 'extra'";
               $stmt_extras = $pdo->query($query_extras);
               $extras = $stmt_extras->fetchAll(PDO::FETCH_ASSOC);
-
               if (count($extras) > 0) {
                   foreach ($extras as $servico) {
                       $id = $servico['id_servico'];
                       $nome = $servico['nome_servico'];
                       $preco_cru = $servico['preco']; 
                       $preco_formatado = number_format($preco_cru, 0, ',', '.');
-                      
+
                       echo '
                       <label class="card-opcao" for="extra_' . $id . '">
                           <input type="checkbox" name="extras[]" value="' . $id . '" data-preco="' . $preco_cru . '" id="extra_' . $id . '" class="checkbox-servico-extra">
@@ -116,6 +117,7 @@
       const selectServico = document.getElementById('servico');
       const textoTotal = document.getElementById('total');
 
+
       function calcularTotal() {
         let total = 0;
 
@@ -124,6 +126,8 @@
         total += precoServico;
 
         const checkboxesExtras = document.querySelectorAll('input[name="extras[]"]');
+
+
         checkboxesExtras.forEach(checkbox => {
           if (checkbox.checked) {
             const precoExtra = parseFloat(checkbox.getAttribute('data-preco')) || 0;
@@ -137,6 +141,7 @@
       selectServico.addEventListener('change', calcularTotal);
       
       const gridCards = document.querySelector('.cards-grid');
+
       if (gridCards) {
         gridCards.addEventListener('change', function(e) {
           if(e.target && e.target.name === 'extras[]') {
